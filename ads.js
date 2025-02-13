@@ -50,7 +50,7 @@ function setUpIMA() {
 
   // Request video ads.
   const adsRequest = new google.ima.AdsRequest();
-  adsRequest.adTagUrl =   'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-7929373597692563&ad_type=video&description_url=http%3A%2F%2Fhttps%3A%2F%2Flineadirectaportal.com%2Fmexico%2Fpor-que-se-celebra-el-dia-internacional-de-la-mujer-y-la-nina-en-la-ciencia-2025-02-11__1320515&max_ad_duration=30000&videoad_start_delay=0&vpmute=1&vpa=click';
+  adsRequest.adTagUrl =   'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-7929373597692563&ad_type=video&description_url='+encode(URI)+'&max_ad_duration=30000&videoad_start_delay=0&vpmute=1&vpa=click';
 
     
     
