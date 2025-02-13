@@ -50,10 +50,11 @@ function setUpIMA() {
 
   // Request video ads.
   const adsRequest = new google.ima.AdsRequest();
-  adsRequest.adTagUrl = 'https://pubads.g.doubleclick.net/gampad/ads?' +
-      'iu=/21775744923/external/single_ad_samples&sz=640x480&' +
-      'cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&' +
-      'output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=';
+  adsRequest.adTagUrl =   'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-7929373597692563&ad_type=video&description_url=http%3A%2F%2Fhttps%3A%2F%2Flineadirectaportal.com%2Fmexico%2Fpor-que-se-celebra-el-dia-internacional-de-la-mujer-y-la-nina-en-la-ciencia-2025-02-11__1320515&max_ad_duration=30000&videoad_start_delay=0&vpmute=1&vpa=click';
+
+    
+    
+
 
   // Specify the linear and nonlinear slot sizes. This helps the SDK to
   // select the correct creative if multiple are returned.
