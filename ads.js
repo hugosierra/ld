@@ -50,7 +50,7 @@ function setUpIMA() {
 
   // Request video ads.
   const adsRequest = new google.ima.AdsRequest();
-  adsRequest.adTagUrl =   'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-7929373597692563&ad_type=video&description_url='+encode(URI)+'&max_ad_duration=30000&videoad_start_delay=0&vpmute=1&vpa=click';
+  adsRequest.adTagUrl =   'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-7929373597692563&ad_type=video&description_url=https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-7929373597692563&ad_type=video&description_url=http%3A%2F%2Fhttps%253A%252F%252Flineadirectaportal.com%252Fentretenimiento%252Festan-de-regreso-backstreet-boys-anuncian-conciertos-para-este-2025-cuando-y-donde-2025-02-13__1322217&max_ad_duration=30000&videoad_start_delay=0&vpmute=1&vpa=click';
 
     
     
