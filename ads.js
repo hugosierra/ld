@@ -50,7 +50,7 @@ function setUpIMA() {
 
   // Request video ads.
   const adsRequest = new google.ima.AdsRequest();
-  adsRequest.adTagUrl =   'https://pubads.g.doubleclick.net/gampad/ads?iu=/260217354/SM_Preroll&description_url=https%3A%2F%2Fsportsmedia.games%2F2025%2F02%2F07%2Fbox-adrian-vargas-vs-sachin-rohila-superan-la-romana-y-todo-se-define-manana%2F&tfcd=0&npa=0&sz=400x300%7C640x480&min_ad_duration=30000&max_ad_duration=60000&gdfp_req=1&unviewed_position_start=1&output=vast&env=vp&impl=s&correlator=';
+  adsRequest.adTagUrl =   'https://pubads.g.doubleclick.net/gampad/ads?iu=/260217354/SM_Preroll&description_url=https%3A%2F%2Fsportsmedia.games%2F&tfcd=0&npa=0&sz=400x300%7C640x480&min_ad_duration=30000&max_ad_duration=60000&gdfp_req=1&unviewed_position_start=1&output=vast&env=vp&impl=s&correlator=';
   //adsRequest.adTagUrl =   'https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-7929373597692563&ad_type=video&description_url=https://googleads.g.doubleclick.net/pagead/ads?client=ca-video-pub-7929373597692563&ad_type=video&description_url=http%3A%2F%2Fhttps%253A%252F%252Flineadirectaportal.com%252Fentretenimiento%252Festan-de-regreso-backstreet-boys-anuncian-conciertos-para-este-2025-cuando-y-donde-2025-02-13__1322217&max_ad_duration=30000&videoad_start_delay=0&vpmute=1&vpa=click';
 
     
