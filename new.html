@@ -1,0 +1,42 @@
+
+<html>
+  <head>
+    <title>IMA HTML5 Simple Demo</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body> 
+    <video id="content_video" class="video-js vjs-default-skin" controls> 
+  <source src="https://www.sportsmedia.games/wp-content/uploads/2025/02/WhatsApp-Video-2025-02-02-at-11.09.50.mp4" type="video/mp4" />
+</video>
+  </body>
+</html>
+
+
+<script type="text/javascript" 
+    src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+
+
+<script>
+// Initialize the video.js player.
+var player = videojs('content_video'); // your video tag’s id
+
+// Declare options for the IMA plugin.
+var options = {
+  id: 'content_video',
+  adTagUrl: 'https://pubads.g.doubleclick.net/gampad/ads?iu=/260217354/SM_Preroll&description_url=https%3A%2F%2Fsportsmedia.games%2F&tfcd=0&npa=0&sz=400x300%7C640x480&min_ad_duration=30000&max_ad_duration=60000&gdfp_req=1&unviewed_position_start=1&output=vast&env=vp&impl=s&correlator='
+
+// Additional options available but not required.
+// See our README for more info.
+};
+
+// Initialize the IMA plugin.
+player.ima(options);
+
+// Request ads.
+player.ima.requestAds();
+
+// Start video playback (will play ads if there is a pre-roll,
+// content otherwise).
+player.play();
+</script>
