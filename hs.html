@@ -13,8 +13,11 @@
 
 <body>
   <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="640" height="360"
-    data-setup="{}">
-  <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+    
+    data-setup='{"preload":"none","autoplay":false,"muted":false}'>
+	    	
+	    	<source src="https://hls.debate.com.mx/videos/videos_hls/2025/02/25/ni_siquiera_lo_pienses.m3u8" type="application/x-mpegURL">
+  <!--<source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />-->
   </video>
 </body>
 <script>
