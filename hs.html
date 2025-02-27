@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -13,7 +14,7 @@
 <body>
   <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="640" height="360"
     data-setup="{}">
-    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="application/x-mpegURL" />
+    <source src="https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8" type="application/x-mpegURL" />
   </video>
 </body>
 <script>
@@ -24,7 +25,7 @@
     console.log("Video.js player initialized");
 
     var vastTagPreroll =
-      "https://pubads.g.doubleclick.net/gampad/ads?iu=/260217354/SM_Preroll&description_url=https%3A%2F%2Fsportsmedia.games%2F&tfcd=0&npa=0&sz=400x300%7C640x480&min_ad_duration=30000&max_ad_duration=60000&gdfp_req=1&unviewed_position_start=1&output=vast&env=vp&impl=s&correlator=";
+      "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_preroll_skippable&sz=640x480&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=";
     var vastTagMidroll =
       "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dlinear&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator=";
     var vastTagPostroll =
@@ -92,7 +93,7 @@
       } else {
         console.log("Ads ready - preroll");
         player.src(
-          "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+          "https://cph-p2p-msl.akamaized.net/hls/live/2000341/test/master.m3u8"
         );
       }
     });
