@@ -1,0 +1,1055 @@
+
+<!DOCTYPE html>
+<html lang="es-MX">
+<head><script type="b8e0fa73315bf3d51b764d29-text/javascript">if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script type="b8e0fa73315bf3d51b764d29-text/javascript">class RocketLazyLoadScripts{constructor(){this.v="1.2.5.1",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],this.interceptedClickListeners=[],this._interceptClickListeners(this),window.addEventListener("pageshow",e=>{this.persisted=e.persisted,this.everythingLoaded&&this._triggerLastFunctions()}),document.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(e){if(document.hidden){e._triggerListener();return}this.triggerEvents.forEach(t=>window.addEventListener(t,e.userEventHandler,{passive:!0})),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(e=>window.removeEventListener(e,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._disableOtherEventListeners(e.target,!0),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._disableOtherEventListeners(e.target,!1),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._disableOtherEventListeners(e.target,!1),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))})}_interceptClickListeners(e){EventTarget.prototype.addEventListenerBase=EventTarget.prototype.addEventListener,EventTarget.prototype.addEventListener=function(t,i,r){"click"!==t||e.windowLoaded||i===e.clickHandler||e.interceptedClickListeners.push({target:this,func:i,options:r}),(this||window).addEventListenerBase(t,i,r)}}_disableOtherEventListeners(e,t){this.interceptedClickListeners.forEach(i=>{i.target===e&&(t?e.removeEventListener("click",i.func,i.options):e.addEventListener("click",i.func,i.options))}),e.parentNode!==document.documentElement&&this._disableOtherEventListeners(e.parentNode,t)}_waitForPendingClicks(){return new Promise(e=>{this._isClickPending?this._pendingClickFinished=e:e()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(e,t,i){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(i,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript][data-rocket-src]").forEach(t=>{let i=t.getAttribute("data-rocket-src");if(i&&0!==i.indexOf("data:")){0===i.indexOf("//")&&(i=location.protocol+i);try{let r=new URL(i).origin;r!==location.origin&&e.push({src:r,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}catch(n){}}}),e=[...new Map(e.map(e=>[JSON.stringify(e),e])).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(this),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._pendingWebpackRequests(this),await this._triggerWindowLoad()}catch(e){console.error(e)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(e=>{e.hasAttribute("data-rocket-src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)})}async _transformScript(e){if(await this._littleBreath(),!0===e.noModule&&"noModule"in HTMLScriptElement.prototype){e.setAttribute("data-rocket-status","skipped");return}return new Promise(t=>{let i;function r(){(i||e).setAttribute("data-rocket-status","executed"),t()}try{if(navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)i=document.createElement("script"),[...e.attributes].forEach(e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),"data-rocket-src"===t&&(t="src"),i.setAttribute(t,e.nodeValue))}),e.text&&(i.text=e.text),i.hasAttribute("src")?(i.addEventListener("load",r),i.addEventListener("error",function(){i.setAttribute("data-rocket-status","failed"),t()}),setTimeout(()=>{i.isConnected||t()},1)):(i.text=e.text,r()),e.parentNode.replaceChild(i,e);else{let n=e.getAttribute("data-rocket-type"),s=e.getAttribute("data-rocket-src");n?(e.type=n,e.removeAttribute("data-rocket-type")):e.removeAttribute("type"),e.addEventListener("load",r),e.addEventListener("error",function(){e.setAttribute("data-rocket-status","failed"),t()}),s?(e.removeAttribute("data-rocket-src"),e.src=s):e.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(e.text)))}}catch(a){e.setAttribute("data-rocket-status","failed"),t()}})}async _loadScriptsFromList(e){let t=e.shift();return t&&t.isConnected?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var i=document.createDocumentFragment();e.forEach(e=>{let r=e.getAttribute&&e.getAttribute("data-rocket-src")||e.src;if(r){let n=document.createElement("link");n.href=r,n.rel=t,"preconnect"!==t&&(n.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),e.crossOrigin&&(n.crossOrigin=e.crossOrigin),e.integrity&&(n.integrity=e.integrity),i.appendChild(n),this.trash.push(n)}}),document.head.appendChild(i)}_delayEventListeners(e){let t={};function i(i,r){return t[r].eventsToRewrite.indexOf(i)>=0&&!e.everythingLoaded?"rocket-"+i:i}function r(e,r){var n;!t[n=e]&&(t[n]={originalFunctions:{add:n.addEventListener,remove:n.removeEventListener},eventsToRewrite:[]},n.addEventListener=function(){arguments[0]=i(arguments[0],n),t[n].originalFunctions.add.apply(n,arguments)},n.removeEventListener=function(){arguments[0]=i(arguments[0],n),t[n].originalFunctions.remove.apply(n,arguments)}),t[e].eventsToRewrite.push(r)}function n(t,i){let r=t[i];t[i]=null,Object.defineProperty(t,i,{get:()=>r||function(){},set(n){e.everythingLoaded?r=n:t["rocket"+i]=r=n}})}r(document,"DOMContentLoaded"),r(window,"DOMContentLoaded"),r(window,"load"),r(window,"pageshow"),r(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t;function i(t){return e.everythingLoaded?t:t.split(" ").map(e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e).join(" ")}function r(r){if(r&&r.fn&&!e.allJQueries.includes(r)){r.fn.ready=r.fn.init.prototype.ready=function(t){return e.domReadyFired?t.bind(document)(r):document.addEventListener("rocket-DOMContentLoaded",()=>t.bind(document)(r)),r([])};let n=r.fn.on;r.fn.on=r.fn.init.prototype.on=function(){return this[0]===window&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(e=>{let t=arguments[0][e];delete arguments[0][e],arguments[0][i(e)]=t})),n.apply(this,arguments),this},e.allJQueries.push(r)}t=r}r(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>t,set(e){r(e)}})}async _pendingWebpackRequests(e){let t=document.querySelector("script[data-webpack]");async function i(){return new Promise(e=>{t.addEventListener("load",e),t.addEventListener("error",e)})}t&&(await i(),await e._requestAnimFrame(),await e._pendingWebpackRequests(e))}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}async _triggerWindowLoad(){await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(e=>e(window).trigger("rocket-jquery-load")),await this._littleBreath();let e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted}),this.windowLoaded=!0}_triggerLastFunctions(){document.onreadystatechange&&document.onreadystatechange(),window.onload&&window.onload(),window.onpageshow&&window.onpageshow({persisted:this.persisted})}_handleDocumentWrite(){let e=new Map;document.write=document.writeln=function(t){let i=document.currentScript;i||console.error("WPRocket unable to document.write this: "+t);let r=document.createRange(),n=i.parentElement,s=e.get(i);void 0===s&&(s=i.nextSibling,e.set(i,s));let a=document.createDocumentFragment();r.setStart(a,0),a.appendChild(r.createContextualFragment(t)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(e=>setTimeout(e)):new Promise(e=>requestAnimationFrame(e))}_emptyTrash(){this.trash.forEach(e=>e.remove())}static run(){let e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name='robots' content='max-image-preview:large' />
+
+	<title>¿Vas a ir al concierto de Stray Kids? Este es el posible setlist para México y Latinoamérica | Línea Directa</title>
+	<meta name="description" content="La euforia crece entre los fans ante la llegada de la banda surcoreana con dos conciertos programados para el 12 y 13 abril, en el Estadio GNP Seguros de la CDMX">
+	<meta name="news_keywords" content="DominATE Tour,Entretenimiento,Gira,Música,Stray Kids,Stray Kids en México,Stray Kids Setlist">
+	<meta name="keywords" content="DominATE Tour,Entretenimiento,Gira,Música,Stray Kids,Stray Kids en México,Stray Kids Setlist">
+
+	<link rel="canonical" href="https://lineadirectaportal.com/entretenimiento/vas-a-ir-al-concierto-de-stray-kids-este-es-el-posible-setlist-para-mexico-y-latinoamerica-2025-03-27__1355388">
+
+	<meta property="fb:pages" content="311432632268">
+	<meta property="fb:app_id" content="311432632268">
+	<meta property="og:title" content="¿Vas a ir al concierto de Stray Kids? Este es el posible setlist para México y Latinoamérica">
+	<meta property="og:type" content="article">
+	<meta property="og:url" content="https://lineadirectaportal.com/entretenimiento/vas-a-ir-al-concierto-de-stray-kids-este-es-el-posible-setlist-para-mexico-y-latinoamerica-2025-03-27__1355388">
+	<meta property="og:description" content="La euforia crece entre los fans ante la llegada de la banda surcoreana con dos conciertos programados para el 12 y 13 abril, en el Estadio GNP Seguros de la CDMX">
+	<meta property="og:locale" content="es-MX">
+	<meta property="og:site_name" content="Línea Directa">
+	<meta property="og:image" content="https://lineadirectaportal.com/wp-content/uploads/2024/11/straykids-concierto-1-1-1.png">
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@linea_directa">
+	<meta name="twitter:title" content="¿Vas a ir al concierto de Stray Kids? Este es el posible setlist para México y Latinoamérica">
+	<meta name="twitter:description" content="La euforia crece entre los fans ante la llegada de la banda surcoreana con dos conciertos programados para el 12 y 13 abril, en el Estadio GNP Seguros de la CDMX">
+	<meta name="twitter:image" content="https://lineadirectaportal.com/wp-content/uploads/2024/11/straykids-concierto-1-1-1.png">
+
+	<script type="application/ld+json">
+	{
+		"@context":"http://schema.org",
+		"@type":"NewsArticle",
+		"mainEntityOfPage": {
+			"@type":"WebPage",
+			"@id":"¿Vas a ir al concierto de Stray Kids? Este es el posible setlist para México y Latinoamérica"
+		},
+		"headline":"¿Vas a ir al concierto de Stray Kids? Este es el posible setlist para México y Latinoamérica",
+		"alternativeHeadline":"¿Vas a ir al concierto de Stray Kids? Este es el posible setlist para México y Latinoamérica",
+		"image":"https://lineadirectaportal.com/wp-content/uploads/2024/11/straykids-concierto-1-1-1.png",
+		"datePublished":"2025-03-27T10:16:58-07:00",
+		"dateModified":"2025-03-27T10:16:58-07:00",
+		"dateCreated":"2025-03-27T10:16:58-07:00",
+		"author": {
+			"@type":"Person",
+			"name":"Melissa Martínez",
+			"url": "https://lineadirectaportal.com/staff/melissa-martinez"
+		},
+		"publisher": {
+			"@type":"Organization",
+			"name":"Línea Directa",
+			"url":"https://lineadirectaportal.com",
+			"logo": {
+				"@type":"ImageObject",
+				"url":"https://lineadirectaportal.com/wp-content/uploads/2024/03/logo-ldportal.png",
+				"width":"600",
+				"height":"60"
+			}
+		},
+		"articleSection":"Entretenimiento",
+		"wordCount":211,
+		"url":"https://lineadirectaportal.com/entretenimiento/vas-a-ir-al-concierto-de-stray-kids-este-es-el-posible-setlist-para-mexico-y-latinoamerica-2025-03-27__1355388",
+		"articleBody":"Ciudad de México.- ¡La espera ha terminado! A unos días de que la famosa agrupación de K-pop, Stray Kids deslumbre con su energía y talento con sus dos presentaciones este próximo 12 y 13 de abril con su gira “DominATE Tour” en Estadio GNP Seguros de la Ciudad de México.
+
+Te puede interesar: Lady Gaga en México: Filtran posible setlist de su concierto en el Estadio GNP Seguros
+
+A través de redes sociales, los internautas y fanáticos han filtrado el posible setlist de las canciones que interpretará el famoso grupo conformado por Bang Chan, Lee Know, Changbin, Hyunjin, Han, Felix, Seungmin e I.N en sus presentaciones en México. Sin embargo, esta información no ha sido confirmada por el grupo ni su equipo de trabajo.
+
+
+Contenido de Instagram
+La presentación de la banda promete ser una experiencia inolvidable para sus seguidores, ya que se espera un show cargado de sus éxitos más icónicos.
+
+¿Cuáles son las canciones filtradas que podrían cantar en México?
+
+I am You
+
+Hellevator
+
+Easy
+
+Cover Me
+
+Lonely St.
+
+Railway
+
+Youth
+
+ULTRA
+
+So Good
+
+Hold My Hand
+
+Unfair
+
+As we are
+
+HALLUCINATION
+
+Giant
+
+S-Class
+
+MOUNTAINS
+
+TOPLINE
+
+Social Path
+
+JJAM
+
+God’s Menu
+
+Thunderous
+
+St. Chk Chk Boom
+
+Charmer
+
+Hall of Fame
+
+Back door
+
+MEGAVERSE
+
+Cinema
+
+Truman
+
+Blind spot
+Contenido de Twitter
+
+skzpopbase
+Cabe destacar que el pasado martes 25 de marzo, Stray Kids, aterrizó en Chile marcando el inicio de su esperada gira en Latinoamérica desatando la emoción entre sus seguidores.",
+		"description":"La euforia crece entre los fans ante la llegada de la banda surcoreana con dos conciertos programados para el 12 y 13 abril, en el Estadio GNP Seguros de la CDMX",
+		"keywords":"DominATE Tour,Entretenimiento,Gira,Música,Stray Kids,Stray Kids en México,Stray Kids Setlist"
+	}
+	</script>
+	
+
+	<link rel="apple-touch-icon" sizes="180x180" href="https://lineadirectaportal.com/wp-content/uploads/2022/09/apple-touch-icon.png.webp">
+	<link rel="icon" type="image/png" sizes="96x96" href="https://lineadirectaportal.com/wp-content/uploads/2022/09/apple-touch-icon.png.webp">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://lineadirectaportal.com/wp-content/uploads/2022/09/favicon-32x32-1.png.webp">
+	<link rel="icon" type="image/png" sizes="16x16" href="https://lineadirectaportal.com/wp-content/uploads/2022/09/favicon-16x16-1.png.webp">
+	<link rel="mask-icon" href="https://lineadirectaportal.com/wp-content/uploads/2022/09/apple-touch-icon.png.webp" color="">
+	<meta name="msapplication-TileColor" content="">
+	<meta name="theme-color" content="">
+
+<script type="rocketlazyloadscript" async data-rocket-src="https://www.googletagmanager.com/gtag/js?id="></script>
+<script type="rocketlazyloadscript">
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', '');
+</script>
+
+<script type="rocketlazyloadscript" async data-rocket-src="https://www.googletagmanager.com/gtag/js?id=G-JF1MXE62BD"></script>
+<script type="rocketlazyloadscript">
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-JF1MXE62BD');
+</script>
+<!-- Google Tag Manager -->
+<script type="rocketlazyloadscript">
+(function(w,d,s,l,i){
+    w[l]=w[l]||[];
+    w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s), dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true;
+    j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+    f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','DEFAULT_GTM_ID');
+</script>
+<!-- End Google Tag Manager --><script type="rocketlazyloadscript" data-minify="1" async data-rocket-src="https://lineadirectaportal.com/wp-content/cache/min/1/tag/js/gpt.js?ver=1742858295"></script><script type="rocketlazyloadscript">
+window.googletag = window.googletag || {cmd: []};
+googletag.cmd.push(function() {
+var mapping_horizontal1 = googletag.sizeMapping().
+addSize([1024, 0],[[970, 250], [970, 90], [728, 90]]). //desktop 
+addSize([768, 0],[[970, 250], [970, 90], [728, 90]]). //laptop 
+addSize([640, 0],[[970, 250], [970, 90], [728, 90]]). //tablet 
+addSize([0, 0], [[320, 100], [300, 100], [300, 250]]). //mobile
+build();
+
+var mapping_horizontal2 = googletag.sizeMapping().
+addSize([1024, 0],[[970, 90], [728, 90]]). //desktop 
+addSize([768, 0],[[970, 90], [728, 90]]). //laptop 
+addSize([640, 0],[[970, 90], [728, 90]]). //tablet 
+addSize([0, 0], [[320, 100], [300, 100], [300, 250]]). //mobile
+build();
+
+
+
+googletag.defineSlot('/22456292802/LD_Notas_Horizontal_1', [[970, 250],[970, 90], [728, 90], [300, 100]], 'LD_Notas_Horizontal_1').defineSizeMapping(mapping_horizontal2).addService(googletag.pubads());
+googletag.defineSlot('/22456292802/LD_Notas_Horizontal_2', [[970, 250],[970, 90], [728, 90], [300, 100]], 'LD_Notas_Horizontal_2').defineSizeMapping(mapping_horizontal2).addService(googletag.pubads());
+googletag.defineSlot('/22456292802/LD_Notas_Horizontal_3', [[970, 250],[970, 90], [728, 90], [300, 100]], 'LD_Notas_Horizontal_3').defineSizeMapping(mapping_horizontal2).addService(googletag.pubads());
+googletag.defineSlot('/22456292802/LD_Notas_Horizontal_4', [[970, 250],[970, 90], [728, 90], [300, 100]], 'LD_Notas_Horizontal_4').defineSizeMapping(mapping_horizontal2).addService(googletag.pubads());
+googletag.defineSlot('/260217354,22456292802/LD_Notas_Rectangle_1', [300, 250], 'LD_Notas_Rectangle_1').addService(googletag.pubads());
+googletag.defineSlot('/22456292802/LD_Notas_Rectangle_2', [300, 250], 'LD_Notas_Rectangle_2').addService(googletag.pubads());
+googletag.defineSlot('/22456292802/LD_Notas_Rectangle_3', [300, 250], 'LD_Notas_Rectangle_3').addService(googletag.pubads());
+googletag.defineSlot('/22456292802/LD_Notas_Rectangle_4', [300, 250], 'LD_Notas_Rectangle_4').addService(googletag.pubads());
+googletag.defineSlot('/22456292802/LD_Notas_Rectangle_5', [300, 250], 'LD_Notas_Rectangle_5').addService(googletag.pubads());
+googletag.defineSlot('/22456292802/LD_Notas_Rectangle_6', [300, 250], 'LD_Notas_Rectangle_6').addService(googletag.pubads());
+googletag.defineSlot('/22456292802/LD_Notas_Rectangle_7', [300, 250], 'LD_Notas_Rectangle_7').addService(googletag.pubads());
+googletag.defineSlot('/22456292802/LD_Notas_Rectangle_8', [300, 250], 'LD_Notas_Rectangle_8').addService(googletag.pubads());
+googletag.defineSlot('/22456292802/LD_Notas_300x600_1', [300, 600], 'LD_Notas_300x600_1').addService(googletag.pubads());
+googletag.defineSlot('/22456292802/LD_Notas_1x1', [1, 1], 'LD_Notas_1x1').addService(googletag.pubads());
+googletag.pubads().enableSingleRequest();
+googletag.pubads().collapseEmptyDivs();
+googletag.enableServices();
+});
+</script>
+<!--tag Head MGID-->
+<script src="https://jsc.mgid.com/site/717534.js" async></script>
+<!--tag Head MGID-->
+<script type="rocketlazyloadscript">
+  var _comscore = _comscore || [];
+  _comscore.push({
+    c1: "2", c2: "14646644", cs_ucfr: "1" ,
+    options: {
+        enableFirstPartyCookie: true
+        }
+    });
+  (function() {
+    var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+    s.src = "https://sb.scorecardresearch.com/cs/14646644/beacon.js";
+    el.parentNode.insertBefore(s, el);
+  })();
+</script>
+<noscript>
+  <img src="https://sb.scorecardresearch.com/p?c1=2&c2=14646644&cs_ucfr=1&cv=3.9.1&cj=1">
+</noscript><link data-minify="1" rel='stylesheet' id='main-styles-css'  href='https://lineadirectaportal.com/wp-content/cache/background-css/lineadirectaportal.com/wp-content/cache/min/1/wp-content/themes/ldirecta_3p0/css/styles.css?ver=1742858295&wpr_t=1743074408' type='text/css' media='all' />
+<style id='rocket-lazyload-inline-css' type='text/css'>
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player:focus-within{outline: 2px solid currentColor;outline-offset: 5px;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:100%;width:100%;left:0;top:0;position:absolute;background:var(--wpr-bg-11531256-f40f-46dd-9e08-826f6eccbf64) no-repeat center;background-color: transparent !important;cursor:pointer;border:none;}
+</style>
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>
+<style id="wpr-lazyload-bg-container"></style><style id="wpr-lazyload-bg-exclusion"></style>
+<noscript>
+<style id="wpr-lazyload-bg-nostyle">.btn--gnews:before{--wpr-bg-ca7fdeb7-74e7-4752-b46d-a7cddee7692f: url('https://lineadirectaportal.com/wp-content/themes/ldirecta_3p0/assets/images/gnews_icon.png');}.btn--gnews:after{--wpr-bg-32e9b351-c961-4e25-8138-5f4dca7568bc: url('https://lineadirectaportal.com/wp-content/themes/ldirecta_3p0/assets/images/gnews_logo.png');}.suscribe{--wpr-bg-12129530-4291-485c-8f30-947ba8675391: url('https://lineadirectaportal.com/wp-content/themes/ldirecta_3p0/assets/images/suscribe_bg.jpg');}.rll-youtube-player .play{--wpr-bg-11531256-f40f-46dd-9e08-826f6eccbf64: url('https://lineadirectaportal.com/wp-content/plugins/wp-rocket/assets/img/youtube.png');}</style>
+</noscript>
+<script type="b8e0fa73315bf3d51b764d29-application/javascript">const rocket_pairs = [{"selector":".btn--gnews","style":".btn--gnews:before{--wpr-bg-ca7fdeb7-74e7-4752-b46d-a7cddee7692f: url('https:\/\/lineadirectaportal.com\/wp-content\/themes\/ldirecta_3p0\/assets\/images\/gnews_icon.png');}","hash":"ca7fdeb7-74e7-4752-b46d-a7cddee7692f","url":"https:\/\/lineadirectaportal.com\/wp-content\/themes\/ldirecta_3p0\/assets\/images\/gnews_icon.png"},{"selector":".btn--gnews","style":".btn--gnews:after{--wpr-bg-32e9b351-c961-4e25-8138-5f4dca7568bc: url('https:\/\/lineadirectaportal.com\/wp-content\/themes\/ldirecta_3p0\/assets\/images\/gnews_logo.png');}","hash":"32e9b351-c961-4e25-8138-5f4dca7568bc","url":"https:\/\/lineadirectaportal.com\/wp-content\/themes\/ldirecta_3p0\/assets\/images\/gnews_logo.png"},{"selector":".suscribe","style":".suscribe{--wpr-bg-12129530-4291-485c-8f30-947ba8675391: url('https:\/\/lineadirectaportal.com\/wp-content\/themes\/ldirecta_3p0\/assets\/images\/suscribe_bg.jpg');}","hash":"12129530-4291-485c-8f30-947ba8675391","url":"https:\/\/lineadirectaportal.com\/wp-content\/themes\/ldirecta_3p0\/assets\/images\/suscribe_bg.jpg"},{"selector":".rll-youtube-player .play","style":".rll-youtube-player .play{--wpr-bg-11531256-f40f-46dd-9e08-826f6eccbf64: url('https:\/\/lineadirectaportal.com\/wp-content\/plugins\/wp-rocket\/assets\/img\/youtube.png');}","hash":"11531256-f40f-46dd-9e08-826f6eccbf64","url":"https:\/\/lineadirectaportal.com\/wp-content\/plugins\/wp-rocket\/assets\/img\/youtube.png"}]; const rocket_excluded_pairs = [];</script></head>
+<body data-rsssl=1>
+
+<header id="site-header" class="header header--site header-site">
+	<div class="wrapper">
+		
+	<div class="header__element">	
+		<button class="btn btn--nav nav-toggle" onclick="if (!window.__cfRLUnblockHandlers) return false; showNav()" aria-label="Mostrar menú de navegación" data-cf-modified-b8e0fa73315bf3d51b764d29-="">
+			<span></span><span></span><span></span>
+		</button>
+		<button class="btn btn--search search-toggle" onclick="if (!window.__cfRLUnblockHandlers) return false; showSearch()" aria-label="Mostrar barra de búsqueda" data-cf-modified-b8e0fa73315bf3d51b764d29-="">
+			<span></span>
+		</button>
+	</div>
+
+	<div class="header__logo">
+		<a href="https://lineadirectaportal.com">
+		<img width="1920" height="614" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201920%20614'%3E%3C/svg%3E" alt="Logo" data-lazy-src="https://lineadirectaportal.com/wp-content/uploads/2024/03/logo-ldportal.png"/><noscript><img width="1920" height="614" src="https://lineadirectaportal.com/wp-content/uploads/2024/03/logo-ldportal.png" alt="Logo"/></noscript>		</a>
+	</div>
+
+	<div class="header__element">
+		<button class="btn btn--live" onclick="if (!window.__cfRLUnblockHandlers) return false; javascript:popUp('https://lineadirectaportal.com/radio-online/')" data-cf-modified-b8e0fa73315bf3d51b764d29-="">
+			<span>Radio online</span>
+		</button>
+	</div>
+
+	</div>
+
+</header>
+
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+function popUp(URL) {
+    window.open(URL, 'Nombre de la ventana', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=1,width=500,height=600,left = 390,top = 50');
+}
+</script><div id="search-form" class="search-form">
+	<div class="wrapper">
+		
+		<div class="searchbox">
+			<form class="form" name="search" method="get" action="https://lineadirectaportal.com/">
+	<input type="text" name="s" value="" placeholder="Introduce tu búsqueda" id="search" class="txt" />
+	<button type="submit" class="btn btn--search" aria-label="Enviar búsqueda"><span></span></button>
+</form>			<button class="btn btn--close nav-toggle" onclick="if (!window.__cfRLUnblockHandlers) return false; hideSearch()" aria-label="Cerrar barra de búsqueda" data-cf-modified-b8e0fa73315bf3d51b764d29-=""><span></span><span></span></button>
+		</div>
+
+		<div class="news-list-title">
+			<h3>Al momento</h3>
+		</div>
+		<div class="news-list-container">
+			
+	<div class="news-item news-item--1355459">
+	<a href="https://lineadirectaportal.com/policiaca/venia-de-hermosillo-trailero-pierde-el-control-y-se-sale-del-camino-en-los-cerros-de-barobampo-ahome-2025-03-27__1355459">
+
+	<figure class="news-item__thumb">
+		<img class="news-thumbnail" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201288%20934'%3E%3C/svg%3E" alt="Unidad de la Guardia Nacional división carreteras." width="1288" height="934" data-lazy-src="https://lineadirectaportal.com/wp-content/uploads/2025/03/Guardia-Nacional-division-carreteras.jpeg"/><noscript><img class="news-thumbnail" src="https://lineadirectaportal.com/wp-content/uploads/2025/03/Guardia-Nacional-division-carreteras.jpeg" alt="Unidad de la Guardia Nacional división carreteras." width="1288" height="934"/></noscript>
+	</figure>
+
+	<div class="news-item__content">
+		<span class="news-locator">ACCIDENTE</span>
+		<h3 class="news-title">Venía de Hermosillo: trailero pierde el control y se sale del camino en los Cerros de Barobampo, Ahome</h3>
+		<div class="news-meta">
+			<span class="news-author">Adrián González</span>
+			<time class="news-time">27 marzo, 2025</time>
+		</div>	
+	</div>
+
+	</a>
+	</div>
+
+	<div class="news-item news-item--1355445">
+	<a href="https://lineadirectaportal.com/sinaloa/encuentran-a-un-hombre-asesinado-en-la-habitacion-de-un-motel-en-culiacan-2025-03-27__1355445">
+
+	<figure class="news-item__thumb">
+		<img class="news-thumbnail" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204000%203000'%3E%3C/svg%3E" alt="HOMICIDIO DOLOSO MOTEL CULIACÁN" width="4000" height="3000" data-lazy-src="https://lineadirectaportal.com/wp-content/uploads/2025/03/HOMICIDIO-DOLOSO-MOTEL-CULIACAN.jpg"/><noscript><img class="news-thumbnail" src="https://lineadirectaportal.com/wp-content/uploads/2025/03/HOMICIDIO-DOLOSO-MOTEL-CULIACAN.jpg" alt="HOMICIDIO DOLOSO MOTEL CULIACÁN" width="4000" height="3000"/></noscript>
+	</figure>
+
+	<div class="news-item__content">
+		<span class="news-locator">HOMICIDIO</span>
+		<h3 class="news-title">Encuentran a un hombre asesinado en la habitación de un motel en Culiacán</h3>
+		<div class="news-meta">
+			<span class="news-author">Geovanny Elizalde</span>
+			<time class="news-time">27 marzo, 2025</time>
+		</div>	
+	</div>
+
+	</a>
+	</div>
+
+	<div class="news-item news-item--1355412">
+	<a href="https://lineadirectaportal.com/sinaloa/hermanos-cota-medio-siglo-de-musica-que-define-la-identidad-de-guasave-2025-03-27__1355412">
+
+	<figure class="news-item__thumb">
+		<img class="news-thumbnail" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20900%20500'%3E%3C/svg%3E" alt="Hermanos Cota" width="900" height="500" data-lazy-src="https://lineadirectaportal.com/wp-content/uploads/2025/03/Hermanos-Cota.jpg"/><noscript><img class="news-thumbnail" src="https://lineadirectaportal.com/wp-content/uploads/2025/03/Hermanos-Cota.jpg" alt="Hermanos Cota" width="900" height="500"/></noscript>
+	</figure>
+
+	<div class="news-item__content">
+		<span class="news-locator">GUASAVE</span>
+		<h3 class="news-title">Hermanos Cota: medio siglo de música que define la identidad de Guasave</h3>
+		<div class="news-meta">
+			<span class="news-author">Martha L. Castro</span>
+			<time class="news-time">27 marzo, 2025</time>
+		</div>	
+	</div>
+
+	</a>
+	</div>
+
+	<div class="news-item news-item--1355450">
+	<a href="https://lineadirectaportal.com/sinaloa/quiero-hacer-muchas-cosas-positivas-nombran-a-erick-mandujano-como-presidente-de-canirac-en-sinaloa-2025-03-27__1355450">
+
+	<figure class="news-item__thumb">
+		<img class="news-thumbnail" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201206%20897'%3E%3C/svg%3E" alt="Nombran a Érick Mandujano como presidente de Canirac en Sinaloa" width="1206" height="897" data-lazy-src="https://lineadirectaportal.com/wp-content/uploads/2025/03/Nombran-a-Erick-Mandujano-como-presidente-de-Canirac-en-Sinaloa.jpeg"/><noscript><img class="news-thumbnail" src="https://lineadirectaportal.com/wp-content/uploads/2025/03/Nombran-a-Erick-Mandujano-como-presidente-de-Canirac-en-Sinaloa.jpeg" alt="Nombran a Érick Mandujano como presidente de Canirac en Sinaloa" width="1206" height="897"/></noscript>
+	</figure>
+
+	<div class="news-item__content">
+		<span class="news-locator">Empresarial</span>
+		<h3 class="news-title">“Quiero hacer muchas cosas positivas”: Nombran a Érick Mandujano como presidente de Canirac en Sinaloa</h3>
+		<div class="news-meta">
+			<span class="news-author">Juan Gabriel Franco</span>
+			<time class="news-time">27 marzo, 2025</time>
+		</div>	
+	</div>
+
+	</a>
+	</div>
+		</div>
+	</div>
+</div><div id="quick-nav" class="quick-nav">
+	<div class="wrapper">
+		
+	<nav class="nav nav--quick">
+	<ul id="menu-menu-rapido" class=""><li id="menu-item-631801" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631801"><a href="https://lineadirectaportal.com/seccion/sinaloa">Sinaloa</a></li>
+<li id="menu-item-921566" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-921566"><a href="https://lineadirectaportal.com/seccion/deportes">Deportes</a></li>
+<li id="menu-item-631802" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631802"><a href="https://lineadirectaportal.com/seccion/mexico">México</a></li>
+<li id="menu-item-1312601" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1312601"><a href="https://lineadirectaportal.com/clave/donald-trump">Trump</a></li>
+<li id="menu-item-631803" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-631803"><a href="https://lineadirectaportal.com/seccion/entretenimiento">Entretenimiento</a></li>
+<li id="menu-item-631804" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631804"><a href="https://lineadirectaportal.com/seccion/clima">Clima</a></li>
+<li id="menu-item-632704" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-632704"><a href="https://lineadirectaportal.com/seccion/policiaca">Policiaca</a></li>
+</ul>	</nav>
+
+	</div>
+</div><div id="navigation" class="navigation">
+	
+	<header class="header header--nav">
+		<div class="logo">
+		<img width="1920" height="614" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201920%20614'%3E%3C/svg%3E" alt="Logo" data-lazy-src="https://lineadirectaportal.com/wp-content/uploads/2024/03/logo-ldportal.png"/><noscript><img width="1920" height="614" src="https://lineadirectaportal.com/wp-content/uploads/2024/03/logo-ldportal.png" alt="Logo"/></noscript>		</div>
+		<button class="btn btn--close nav-toggle" onclick="if (!window.__cfRLUnblockHandlers) return false; hideNav()" aria-label="Cerrar menú de navegación" data-cf-modified-b8e0fa73315bf3d51b764d29-=""><span></span><span></span></button>
+		
+	</header>
+
+	<nav class="nav nav--main">
+	<ul id="menu-menu-principal" class=""><li id="menu-item-631773" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631773"><a href="https://lineadirectaportal.com/seccion/agropecuaria">Agropecuaria</a></li>
+<li id="menu-item-631796" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-631796"><a href="https://lineadirectaportal.com/seccion/sinaloa">Sinaloa</a>
+<ul class="sub-menu">
+	<li id="menu-item-631789" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631789"><a href="https://lineadirectaportal.com/seccion/sinaloa/norte">Norte</a></li>
+	<li id="menu-item-631776" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631776"><a href="https://lineadirectaportal.com/seccion/sinaloa/centro">Centro</a></li>
+	<li id="menu-item-631797" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631797"><a href="https://lineadirectaportal.com/seccion/sinaloa/sur">Sur</a></li>
+</ul>
+</li>
+<li id="menu-item-631788" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631788"><a href="https://lineadirectaportal.com/seccion/mexico">México</a></li>
+<li id="menu-item-661041" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-661041"><a href="https://lineadirectaportal.com/opinion">Opinión</a></li>
+<li id="menu-item-631777" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631777"><a href="https://lineadirectaportal.com/seccion/clima">Clima</a></li>
+<li id="menu-item-631778" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631778"><a href="https://lineadirectaportal.com/seccion/deportes">Deportes</a></li>
+<li id="menu-item-631780" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631780"><a href="https://lineadirectaportal.com/seccion/economia">Economía</a></li>
+<li id="menu-item-631782" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-631782"><a href="https://lineadirectaportal.com/seccion/entretenimiento">Entretenimiento</a></li>
+<li id="menu-item-631785" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631785"><a href="https://lineadirectaportal.com/seccion/internacional">Internacional</a></li>
+<li id="menu-item-631791" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631791"><a href="https://lineadirectaportal.com/seccion/policiaca">Policíaca</a></li>
+<li id="menu-item-631793" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631793"><a href="https://lineadirectaportal.com/seccion/salud">Salud</a></li>
+<li id="menu-item-631798" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631798"><a href="https://lineadirectaportal.com/seccion/tecnologia">Tecnología</a></li>
+<li id="menu-item-631800" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631800"><a href="https://lineadirectaportal.com/seccion/viral">Viral</a></li>
+</ul>	</nav>
+
+	<div class="social-links">
+		<span>Síguenos</span>
+	<nav class="nav nav--social">
+	<ul>
+<li><a href="https://www.facebook.com/LDPortal/" class="icon icon--facebook" aria-label="Ir a la página de Facebook de Línea Directa Portal"><span>Facebook</span></a></li><li><a href="https://twitter.com/linea_directa" class="icon icon--twitter" aria-label="Ir al perfil de Twitter de Línea Directa"><span>Twitter</span></a></li><li><a href="https://www.instagram.com/lineadirecta_portal/" class="icon icon--instagram" aria-label="Ir al perfil de Instagram de Línea Directa Portal"><span>Instagram</span></a></li><li><a href="https://www.youtube.com/@LineaDirectaTV" class="icon icon--youtube" aria-label="Ir al canal de YouTube de Línea Directa"><span>Youtube</span></a></li><li><a href="https://www.tiktok.com/@ldportal" class="icon icon--tiktok" aria-label="Ir al perfil de TikTok de Línea Directa Portal"><span>Tiktok</span></a></li>
+	</ul>
+	</nav>
+	</div>
+
+</div>
+			<div class="ads wrapper"><div id='LD_Notas_Horizontal_1'>
+<script type="rocketlazyloadscript">
+googletag.cmd.push(function() { googletag.display('LD_Notas_Horizontal_1'); });
+</script>
+</div>
+<div id='LD_Notas_1x1'>
+<script type="rocketlazyloadscript">
+googletag.cmd.push(function() { googletag.display('LD_Notas_1x1'); });
+</script>
+</div></div>
+		
+
+
+<div class="module module--l">
+
+	<div class="wrapper">
+				<article id="article-1355388" class="article article--news">
+			
+	<header class="article__header">
+		<span class="article-section">Concierto</span>
+		<h1 class="article-title">¿Vas a ir al concierto de Stray Kids? Este es el posible setlist para México y Latinoamérica</h1>
+		<p class="article-summary">La euforia crece entre los fans ante la llegada de la banda surcoreana con dos conciertos programados para el 12 y 13 abril, en el Estadio GNP Seguros de la CDMX</p>
+	</header>
+
+	<div class="article__meta">
+		<div>Por: <span>Melissa Martínez</span></div>
+		<time datetime="2025-03-27T10:16">27 marzo, 2025 - 10:16 am</time>
+
+	</div>
+
+
+	<figure class="article__thumbnail">
+		<img width="900" height="500" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20900%20500'%3E%3C/svg%3E" alt="" data-lazy-src="https://lineadirectaportal.com/wp-content/uploads/2024/11/straykids-concierto-1-1-1.png.webp"/><noscript><img width="900" height="500" src="https://lineadirectaportal.com/wp-content/uploads/2024/11/straykids-concierto-1-1-1.png.webp" alt=""/></noscript>
+		<figcaption> | Internet</figcaption>
+	</figure>
+
+			<div class="ads"><div id='LD_Notas_Horizontal_2'>
+<script type="rocketlazyloadscript">
+googletag.cmd.push(function() { googletag.display('LD_Notas_Horizontal_2'); });
+</script>
+</div></div>
+		
+			<div class="article__content">
+				<div>
+					
+	<div class="sharebox">
+
+	<a 
+	class="btn"
+	title="WhatsApp"
+	href="https://api.whatsapp.com/send?text=Lee esta noticia de : https://lineadirectaportal.com/entretenimiento/vas-a-ir-al-concierto-de-stray-kids-este-es-el-posible-setlist-para-mexico-y-latinoamerica-2025-03-27__1355388" 
+	target="_blank" 
+	>
+	<i class="icon icon--whatsapp"></i>
+	</a>
+
+	<a 
+	class="btn" 
+	title="Compartir en Facebook" 
+	rel="noopener" 
+	data-share="facebook" 
+	data-url="https://lineadirectaportal.com/entretenimiento/vas-a-ir-al-concierto-de-stray-kids-este-es-el-posible-setlist-para-mexico-y-latinoamerica-2025-03-27__1355388" 
+	href="https://www.facebook.com/sharer/sharer.php?u=https://lineadirectaportal.com/entretenimiento/vas-a-ir-al-concierto-de-stray-kids-este-es-el-posible-setlist-para-mexico-y-latinoamerica-2025-03-27__1355388"
+	target="_blank" 
+	>
+	<i class="icon icon--facebook"></i>
+	</a>
+
+	<a 
+	class="btn"
+	title="Compartir en Twitter" 
+	rel="noopener"
+	data-share="twitter" 
+	data-url="https://lineadirectaportal.com/entretenimiento/vas-a-ir-al-concierto-de-stray-kids-este-es-el-posible-setlist-para-mexico-y-latinoamerica-2025-03-27__1355388" 
+	href="https://twitter.com/intent/tweet?text=Lee esta noticia en Línea Directa https://lineadirectaportal.com/entretenimiento/vas-a-ir-al-concierto-de-stray-kids-este-es-el-posible-setlist-para-mexico-y-latinoamerica-2025-03-27__1355388"
+	target="_blank" 
+	>
+	<i class="icon icon--twitter"></i>
+	</a>
+
+	<a 
+	class="btn"
+	title="Compartir en Telegram"
+	rel="noopener"
+	data-share="telegram" 
+	href="https://telegram.me/share/url?url=https://lineadirectaportal.com/entretenimiento/vas-a-ir-al-concierto-de-stray-kids-este-es-el-posible-setlist-para-mexico-y-latinoamerica-2025-03-27__1355388%2F&amp;text=¿Vas a ir al concierto de Stray Kids? Este es el posible setlist para México y Latinoamérica"
+	target="_blank" 
+	title="Telegram"
+	>
+	<i class="icon icon--telegram"></i>
+	</a>
+
+	</div>
+				</div>
+				<div>
+					<p>Ciudad de México.- ¡La espera ha terminado! A unos días de que la famosa agrupación de K-pop, <strong>Stray Kids </strong>deslumbre con su energía y talento con sus dos presentaciones este próximo <strong>12 y 13 de abril con su gira “DominATE Tour”</strong> en Estadio GNP Seguros de la Ciudad de México.</p>
+					<div class="ads">"<div data-type="_mgwidget" data-widget-id="1758553"></div> 
+<script>(function(w,q){w[q]=w[q]||[];w[q].push([""_mgc.load""])})(window,""_mgq""); 
+</script> "</div>
+<p><strong>Te puede interesar: <a href="https://lineadirectaportal.com/entretenimiento/lady-gaga-en-mexico-filtran-posible-setlist-de-su-concierto-en-el-estadio-gnp-seguros-2025-03-14__1345912">Lady Gaga en México: Filtran posible setlist de su concierto en el Estadio GNP Seguros</a></strong></p>
+<p>A través de redes sociales, los internautas y fanáticos han filtrado el posible setlist de las canciones que interpretará el famoso grupo conformado por <strong>Bang Chan, Lee Know, Changbin, Hyunjin, Han, Felix, Seungmin e I.N</strong> en sus presentaciones en México. Sin embargo, esta información no ha sido confirmada por el grupo ni su equipo de trabajo.</p>
+<blockquote class="instagram-media social-embed" data-instgrm-permalink="https://www.instagram.com/p/DHr7jAchWJy/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==">
+<div></div>
+<p>Contenido de Instagram</p></blockquote>
+<p>La presentación de la banda promete ser una experiencia inolvidable para sus seguidores, ya que se espera un show cargado de sus éxitos más icónicos.</p>
+<p><strong>¿Cuáles son las canciones filtradas que podrían cantar en México?</strong></p>
+<p>I am You</p><div class="ads"><div id='LD_Notas_Rectangle_3'>
+<script type="rocketlazyloadscript">
+googletag.cmd.push(function() { googletag.display('LD_Notas_Rectangle_3; });
+</script>
+</div></div>
+<p>Hellevator</p>
+<p>Easy</p>
+<p>Cover Me</p>
+<p>Lonely St.</p><div class="ads"><div id='LD_Notas_Rectangle_4>
+<script type="rocketlazyloadscript">
+googletag.cmd.push(function() { googletag.display('LD_Notas_Rectangle_4 });
+</script>
+</div></div>
+<p>Railway</p>
+<p>Youth</p>
+<p>ULTRA</p>
+<p>So Good</p><div class="ads"><div id='LD_Notas_Rectangle_5'>
+<script type="rocketlazyloadscript">
+googletag.cmd.push(function() { googletag.display('LD_Notas_Rectangle_5; });
+</script>
+</div></div>
+<p>Hold My Hand</p>
+<p>Unfair</p>
+<p>As we are</p>
+<p>HALLUCINATION</p><div class="ads"><div id='LD_Notas_Rectangle_6'>
+<script type="rocketlazyloadscript">
+googletag.cmd.push(function() { googletag.display('LD_Notas_Rectangle_6; });
+</script>
+</div></div>
+<p>Giant</p>
+<p>S-Class</p>
+<p>MOUNTAINS</p>
+<p>TOPLINE</p><div class="ads"><div id='LD_Notas_Rectangle_7'>
+<script type="rocketlazyloadscript">
+googletag.cmd.push(function() { googletag.display('LD_Notas_Rectangle_7; });
+</script>
+</div></div>
+<p>Social Path</p>
+<p>JJAM</p>
+<p>God’s Menu</p>
+<p>Thunderous</p><div class="ads"><div id='LD_Notas_Rectangle_8'>
+<script type="rocketlazyloadscript">
+googletag.cmd.push(function() { googletag.display('LD_Notas_Rectangle_8; });
+</script>
+</div></div>
+<p>St. Chk Chk Boom</p>
+<p>Charmer</p>
+<p>Hall of Fame</p>
+<p>Back door</p>
+<p>MEGAVERSE</p>
+<p>Cinema</p>
+<p>Truman</p>
+<p>Blind spot</p>
+<blockquote class="twitter-tweet social-embed"><p>Contenido de Twitter</p>
+<p><a href="https://twitter.com/skzpopbase/status/1905060939319157062"><cite>skzpopbase</cite></a></p></blockquote>
+<p>Cabe destacar que el pasado martes 25 de marzo, <strong>Stray Kids, aterrizó en Chile</strong> marcando el inicio de su esperada gira en Latinoamérica desatando la emoción entre sus seguidores.</p>
+</p>				</div>
+			</div>
+
+			<div class="article__source">
+				<p>
+				Fuente: Línea Directa				</p>
+			</div>
+
+			<div class="feed-links">
+				<a class="btn btn--gnews" href="https://news.google.com/publications/CAAqBwgKMMarnAsw2rW0Aw?hl=es-419&gl=MX&ceid=MX%3Aes-419">Síguenos en: </a>
+			</div>
+
+			
+			<div class="author-info">
+
+			<figure class="author_image">
+				<img width="1064" height="1600" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201064%201600'%3E%3C/svg%3E" alt="Fotografía de perfil de Melissa Martínez" data-lazy-src="https://lineadirectaportal.com/wp-content/uploads/2024/11/WhatsApp-Image-2024-11-22-at-3.18.58-PM.jpeg.webp"/><noscript><img width="1064" height="1600" src="https://lineadirectaportal.com/wp-content/uploads/2024/11/WhatsApp-Image-2024-11-22-at-3.18.58-PM.jpeg.webp" alt="Fotografía de perfil de Melissa Martínez"/></noscript>
+			</figure>
+
+			<div class="author_description">
+				<p class="author-name"><a href="">Melissa Martínez</a></p>
+				<p class="author-position">Editor de Contenidos</p>
+				<p class="author-description">Melissa Martínez</p>
+				<a class="btn btn--more" href="https://lineadirectaportal.com/staff/melissa-martinez">Ver más</a>
+			</div>
+
+			</div>
+		
+		</article>
+	
+	<aside>
+		
+			<div class="ads"><div id='LD_Notas_Rectangle_1'>
+<script type="rocketlazyloadscript">
+googletag.cmd.push(function() { googletag.display('LD_Notas_Rectangle_1'); });
+</script>
+</div></div>
+		
+			<div class="ads widget"><script type="rocketlazyloadscript">
+(function (d, s, n) {
+var js, fjs = d.getElementsByTagName(s)[0];
+js = d.createElement(s);
+js.className = n;
+js.src = "//player.ex.co/player/5539622b-1de4-46a8-897e-71e7ba5d847e";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'exco-player'));
+</script>
+<div id="5539622b-1de4-46a8-897e-71e7ba5d847e" ></div></div>
+		
+			<div class="ads"><div id='LD_Notas_Rectangle_2'>
+<script type="rocketlazyloadscript">
+googletag.cmd.push(function() { googletag.display('LD_Notas_Rectangle_2; });
+</script>
+</div></div>
+		<div class="widget">
+	
+	<div class="widget__title">
+		<h4>Lo más reciente</h4>
+	</div>
+
+	<div class="widget__content">
+		<div class="news-list">
+		
+	<div class="news-item news-item--1355459">
+	<a href="https://lineadirectaportal.com/policiaca/venia-de-hermosillo-trailero-pierde-el-control-y-se-sale-del-camino-en-los-cerros-de-barobampo-ahome-2025-03-27__1355459">
+
+	<figure class="news-item__thumb">
+		<img class="news-thumbnail" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201288%20934'%3E%3C/svg%3E" alt="Unidad de la Guardia Nacional división carreteras." width="1288" height="934" data-lazy-src="https://lineadirectaportal.com/wp-content/uploads/2025/03/Guardia-Nacional-division-carreteras.jpeg"/><noscript><img class="news-thumbnail" src="https://lineadirectaportal.com/wp-content/uploads/2025/03/Guardia-Nacional-division-carreteras.jpeg" alt="Unidad de la Guardia Nacional división carreteras." width="1288" height="934"/></noscript>
+	</figure>
+
+	<div class="news-item__content">
+		<span class="news-locator">ACCIDENTE</span>
+		<h3 class="news-title">Venía de Hermosillo: trailero pierde el control y se sale del camino en los Cerros de Barobampo, Ahome</h3>
+		<div class="news-meta">
+			<span class="news-author">Adrián González</span>
+			<time class="news-time">27 marzo, 2025</time>
+		</div>	
+	</div>
+
+	</a>
+	</div>
+
+	<div class="news-item news-item--1355445">
+	<a href="https://lineadirectaportal.com/sinaloa/encuentran-a-un-hombre-asesinado-en-la-habitacion-de-un-motel-en-culiacan-2025-03-27__1355445">
+
+	<figure class="news-item__thumb">
+		<img class="news-thumbnail" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204000%203000'%3E%3C/svg%3E" alt="HOMICIDIO DOLOSO MOTEL CULIACÁN" width="4000" height="3000" data-lazy-src="https://lineadirectaportal.com/wp-content/uploads/2025/03/HOMICIDIO-DOLOSO-MOTEL-CULIACAN.jpg"/><noscript><img class="news-thumbnail" src="https://lineadirectaportal.com/wp-content/uploads/2025/03/HOMICIDIO-DOLOSO-MOTEL-CULIACAN.jpg" alt="HOMICIDIO DOLOSO MOTEL CULIACÁN" width="4000" height="3000"/></noscript>
+	</figure>
+
+	<div class="news-item__content">
+		<span class="news-locator">HOMICIDIO</span>
+		<h3 class="news-title">Encuentran a un hombre asesinado en la habitación de un motel en Culiacán</h3>
+		<div class="news-meta">
+			<span class="news-author">Geovanny Elizalde</span>
+			<time class="news-time">27 marzo, 2025</time>
+		</div>	
+	</div>
+
+	</a>
+	</div>
+
+	<div class="news-item news-item--1355412">
+	<a href="https://lineadirectaportal.com/sinaloa/hermanos-cota-medio-siglo-de-musica-que-define-la-identidad-de-guasave-2025-03-27__1355412">
+
+	<figure class="news-item__thumb">
+		<img class="news-thumbnail" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20900%20500'%3E%3C/svg%3E" alt="Hermanos Cota" width="900" height="500" data-lazy-src="https://lineadirectaportal.com/wp-content/uploads/2025/03/Hermanos-Cota.jpg"/><noscript><img class="news-thumbnail" src="https://lineadirectaportal.com/wp-content/uploads/2025/03/Hermanos-Cota.jpg" alt="Hermanos Cota" width="900" height="500"/></noscript>
+	</figure>
+
+	<div class="news-item__content">
+		<span class="news-locator">GUASAVE</span>
+		<h3 class="news-title">Hermanos Cota: medio siglo de música que define la identidad de Guasave</h3>
+		<div class="news-meta">
+			<span class="news-author">Martha L. Castro</span>
+			<time class="news-time">27 marzo, 2025</time>
+		</div>	
+	</div>
+
+	</a>
+	</div>
+
+	<div class="news-item news-item--1355450">
+	<a href="https://lineadirectaportal.com/sinaloa/quiero-hacer-muchas-cosas-positivas-nombran-a-erick-mandujano-como-presidente-de-canirac-en-sinaloa-2025-03-27__1355450">
+
+	<figure class="news-item__thumb">
+		<img class="news-thumbnail" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201206%20897'%3E%3C/svg%3E" alt="Nombran a Érick Mandujano como presidente de Canirac en Sinaloa" width="1206" height="897" data-lazy-src="https://lineadirectaportal.com/wp-content/uploads/2025/03/Nombran-a-Erick-Mandujano-como-presidente-de-Canirac-en-Sinaloa.jpeg"/><noscript><img class="news-thumbnail" src="https://lineadirectaportal.com/wp-content/uploads/2025/03/Nombran-a-Erick-Mandujano-como-presidente-de-Canirac-en-Sinaloa.jpeg" alt="Nombran a Érick Mandujano como presidente de Canirac en Sinaloa" width="1206" height="897"/></noscript>
+	</figure>
+
+	<div class="news-item__content">
+		<span class="news-locator">Empresarial</span>
+		<h3 class="news-title">“Quiero hacer muchas cosas positivas”: Nombran a Érick Mandujano como presidente de Canirac en Sinaloa</h3>
+		<div class="news-meta">
+			<span class="news-author">Juan Gabriel Franco</span>
+			<time class="news-time">27 marzo, 2025</time>
+		</div>	
+	</div>
+
+	</a>
+	</div>
+
+	<div class="news-item news-item--1355430">
+	<a href="https://lineadirectaportal.com/entretenimiento/peso-pluma-anuncia-su-gira-mundial-la-doble-p-world-cuando-y-donde-se-presentara-2025-03-27__1355430">
+
+	<figure class="news-item__thumb">
+		<img class="news-thumbnail" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20900%20500'%3E%3C/svg%3E" alt="Peso Pluma." width="900" height="500" data-lazy-src="https://lineadirectaportal.com/wp-content/uploads/2024/06/PP.png.webp"/><noscript><img class="news-thumbnail" src="https://lineadirectaportal.com/wp-content/uploads/2024/06/PP.png.webp" alt="Peso Pluma." width="900" height="500"/></noscript>
+	</figure>
+
+	<div class="news-item__content">
+		<span class="news-locator">Concierto</span>
+		<h3 class="news-title">Peso Pluma anuncia su gira mundial &#8220;La Doble P World&#8221; ¿Cuándo y dónde se presentará?</h3>
+		<div class="news-meta">
+			<span class="news-author">Melissa Martínez</span>
+			<time class="news-time">27 marzo, 2025</time>
+		</div>	
+	</div>
+
+	</a>
+	</div>
+		</div>
+	</div>
+
+</div>
+			<div class="ads sticky"><div id='LD_Notas_300x600_1'>
+<script type="rocketlazyloadscript">
+googletag.cmd.push(function() { googletag.display('LD_Notas_300x600_1; });
+</script>
+</div></div>
+			</aside>
+
+	</div>
+
+</div>
+
+<div class="last-news">
+	<div class="wrapper">
+	<div data-type="_mgwidget" data-widget-id="1758552"> </div> 
+<script>
+(function(w,q){w[q]=w[q]||[];w[q].push(["_mgc.load"])})(window,"_mgq"); 
+</script>
+
+<div class="news-list-title">
+	<h4>Al momento</h4>
+</div>
+
+<div class="news-list-container">
+
+	<div class="news-item news-item--1355459">
+	<a href="https://lineadirectaportal.com/policiaca/venia-de-hermosillo-trailero-pierde-el-control-y-se-sale-del-camino-en-los-cerros-de-barobampo-ahome-2025-03-27__1355459">
+
+	<figure class="news-item__thumb">
+		<img srcset="
+		https://lineadirectaportal.com/wp-content/uploads/2025/03/Guardia-Nacional-division-carreteras-350x280.jpeg 300w,
+		https://lineadirectaportal.com/wp-content/uploads/2025/03/Guardia-Nacional-division-carreteras-960x560.jpeg 800w"
+		sizes="
+		(max-width: 768px) 300px,
+		800px
+		"
+		alt="Unidad de la Guardia Nacional división carreteras."
+		>
+	</figure>
+
+	<div class="news-item__content">
+		<span class="news-locator">ACCIDENTE</span>
+		<h3 class="news-title">Venía de Hermosillo: trailero pierde el control y se sale del camino en los Cerros de Barobampo, Ahome</h3>
+		<div class="news-meta">
+			<span class="news-author">Adrián González</span>
+			<time class="news-time">27 marzo, 2025</time>
+		</div>	
+	</div>
+
+	</a>
+	</div>
+
+	<div class="news-item news-item--1355445">
+	<a href="https://lineadirectaportal.com/sinaloa/encuentran-a-un-hombre-asesinado-en-la-habitacion-de-un-motel-en-culiacan-2025-03-27__1355445">
+
+	<figure class="news-item__thumb">
+		<img srcset="
+		https://lineadirectaportal.com/wp-content/uploads/2025/03/HOMICIDIO-DOLOSO-MOTEL-CULIACAN-350x280.jpg 300w,
+		https://lineadirectaportal.com/wp-content/uploads/2025/03/HOMICIDIO-DOLOSO-MOTEL-CULIACAN-960x560.jpg 800w"
+		sizes="
+		(max-width: 768px) 300px,
+		800px
+		"
+		alt="HOMICIDIO DOLOSO MOTEL CULIACÁN"
+		>
+	</figure>
+
+	<div class="news-item__content">
+		<span class="news-locator">HOMICIDIO</span>
+		<h3 class="news-title">Encuentran a un hombre asesinado en la habitación de un motel en Culiacán</h3>
+		<div class="news-meta">
+			<span class="news-author">Geovanny Elizalde</span>
+			<time class="news-time">27 marzo, 2025</time>
+		</div>	
+	</div>
+
+	</a>
+	</div>
+
+	<div class="news-item news-item--1355412">
+	<a href="https://lineadirectaportal.com/sinaloa/hermanos-cota-medio-siglo-de-musica-que-define-la-identidad-de-guasave-2025-03-27__1355412">
+
+	<figure class="news-item__thumb">
+		<img srcset="
+		https://lineadirectaportal.com/wp-content/uploads/2025/03/Hermanos-Cota-350x280.jpg 300w,
+		https://lineadirectaportal.com/wp-content/uploads/2025/03/Hermanos-Cota.jpg 800w"
+		sizes="
+		(max-width: 768px) 300px,
+		800px
+		"
+		alt="Hermanos Cota"
+		>
+	</figure>
+
+	<div class="news-item__content">
+		<span class="news-locator">GUASAVE</span>
+		<h3 class="news-title">Hermanos Cota: medio siglo de música que define la identidad de Guasave</h3>
+		<div class="news-meta">
+			<span class="news-author">Martha L. Castro</span>
+			<time class="news-time">27 marzo, 2025</time>
+		</div>	
+	</div>
+
+	</a>
+	</div>
+
+	<div class="news-item news-item--1355450">
+	<a href="https://lineadirectaportal.com/sinaloa/quiero-hacer-muchas-cosas-positivas-nombran-a-erick-mandujano-como-presidente-de-canirac-en-sinaloa-2025-03-27__1355450">
+
+	<figure class="news-item__thumb">
+		<img srcset="
+		https://lineadirectaportal.com/wp-content/uploads/2025/03/Nombran-a-Erick-Mandujano-como-presidente-de-Canirac-en-Sinaloa-350x280.jpeg 300w,
+		https://lineadirectaportal.com/wp-content/uploads/2025/03/Nombran-a-Erick-Mandujano-como-presidente-de-Canirac-en-Sinaloa-960x560.jpeg 800w"
+		sizes="
+		(max-width: 768px) 300px,
+		800px
+		"
+		alt="Nombran a Érick Mandujano como presidente de Canirac en Sinaloa"
+		>
+	</figure>
+
+	<div class="news-item__content">
+		<span class="news-locator">Empresarial</span>
+		<h3 class="news-title">“Quiero hacer muchas cosas positivas”: Nombran a Érick Mandujano como presidente de Canirac en Sinaloa</h3>
+		<div class="news-meta">
+			<span class="news-author">Juan Gabriel Franco</span>
+			<time class="news-time">27 marzo, 2025</time>
+		</div>	
+	</div>
+
+	</a>
+	</div>
+</div><script type="rocketlazyloadscript" data-rocket-type="text/javascript" class="teads" async="true" data-rocket-src="//a.teads.tv/page/87301/tag"></script>
+	</div>
+</div>
+
+
+			<div class="ads wrapper"><div id='LD_Notas_Horizontal_3'>
+<script type="rocketlazyloadscript">
+googletag.cmd.push(function() { googletag.display('LD_Notas_Horizontal_3'); });
+</script>
+</div></div>
+		<!-- suscribe -->
+<div class="suscribe suscribe--banner">
+	<div class="wrapper">
+		
+	<div class="suscribe__cta">
+		<h4>Suscríbete a nuestro boletín</h4>
+		<p>Para tener la información al momento, suscríbete a nuestro boletín en el tendrás las últimas noticias de Sinaloa, México y el mundo.</p>
+	</div>
+
+	<div class="suscribe__form">
+		<form action="https://lineadirectaportal.us8.list-manage.com/subscribe/post?u=3d0b610e0d29fd3590498e7a2&amp;id=1a5bee0976&amp;f_id=000e65e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate suscribe-form" target="_blank" novalidate>
+
+			<div class="suscribe-fields">
+				
+				<div class="mc-field-group input-field">
+					<input type="text" value="" name="FNAME" class="" id="mce-FNAME" placeholder="Ingresa tu nombre">
+				</div>
+				<div class="mc-field-group input-field">
+					<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Ingresa tu e-mail">
+				</div>
+				<div class="btn btn--send">
+					<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+				</div>
+
+			</div>
+
+			<span class="subscribe__terms">Suscribirse implica aceptar los <a href="#" title="Términos y Condiciones">términos y condiciones</a></span>
+
+			<div id="mce-responses" class="subscribe__response">
+				<div class="response" id="mce-error-response" style="display:none"></div>
+				<div class="response" id="mce-success-response" style="display:none"></div>
+			</div>
+
+		</form>
+		<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' data-rocket-src='https://lineadirectaportal.com/wp-content/cache/min/1/downloads.mailchimp.com/js/mc-validate.js?ver=1742858296' defer></script>
+		<script type="rocketlazyloadscript" data-rocket-type='text/javascript'>window.addEventListener('DOMContentLoaded', function() {
+			(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';
+			$.extend($.validator.messages, {
+				required: "Este campo es obligatorio.",
+				remote: "Por favor, rellena este campo.",
+				email: "Por favor, escribe una dirección de correo válida",
+				url: "Por favor, escribe una URL válida.",
+				date: "Por favor, escribe una fecha válida.",
+				dateISO: "Por favor, escribe una fecha (ISO) válida.",
+				number: "Por favor, escribe un número entero válido.",
+				digits: "Por favor, escribe sólo dígitos.",
+				creditcard: "Por favor, escribe un número de tarjeta válido.",
+				equalTo: "Por favor, escribe el mismo valor de nuevo.",
+				accept: "Por favor, escribe un valor con una extensión aceptada.",
+				maxlength: $.validator.format("Por favor, no escribas más de {0} caracteres."),
+				minlength: $.validator.format("Por favor, no escribas menos de {0} caracteres."),
+				rangelength: $.validator.format("Por favor, escribe un valor entre {0} y {1} caracteres."),
+				range: $.validator.format("Por favor, escribe un valor entre {0} y {1}."),
+				max: $.validator.format("Por favor, escribe un valor menor o igual a {0}."),
+				min: $.validator.format("Por favor, escribe un valor mayor o igual a {0}.")
+			});}(jQuery));var $mcj = jQuery.noConflict(true);
+		});</script>
+	</div>
+
+	</div>
+</div>
+
+<!-- footer -->
+<footer id="footer" class="footer">
+
+<div class="footer__upper">
+	<div class="wrapper">
+		<div class="footer-widget footer-identity">
+			<img width="1920" height="614" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201920%20614'%3E%3C/svg%3E" alt="Logo" data-lazy-src="https://lineadirectaportal.com/wp-content/uploads/2024/03/logo-ldportal.png"/><noscript><img width="1920" height="614" src="https://lineadirectaportal.com/wp-content/uploads/2024/03/logo-ldportal.png" alt="Logo"/></noscript><p>En su historia, el Sistema Informativo Línea Directa ha sumado la participación de periodistas de todo el estado, la República Mexicana y otros paises, logrando obtener un producto rico en noticias.</p>		</div>
+
+		<div class="footer-widget footer-links">
+			<nav class="nav nav--footer">
+				<ul id="menu-menu-pie-de-pagina-i" class=""><li id="menu-item-734484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-734484"><a href="https://lineadirectaportal.com/politicas-de-privacidad">Políticas de privacidad</a></li>
+<li id="menu-item-938652" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-938652"><a href="https://lineadirectaportal.com/nuestra-historia">Nuestra Historia</a></li>
+</ul>			</nav>
+			<nav class="nav nav--footer">
+							</nav>
+		</div>
+
+		<div class="footer-widget footer-social">
+			
+			<span>Síguenos</span>
+	<nav class="nav nav--social">
+	<ul>
+<li><a href="https://www.facebook.com/LDPortal/" class="icon icon--facebook" aria-label="Ir a la página de Facebook de Línea Directa Portal"><span>Facebook</span></a></li><li><a href="https://twitter.com/linea_directa" class="icon icon--twitter" aria-label="Ir al perfil de Twitter de Línea Directa"><span>Twitter</span></a></li><li><a href="https://www.instagram.com/lineadirecta_portal/" class="icon icon--instagram" aria-label="Ir al perfil de Instagram de Línea Directa Portal"><span>Instagram</span></a></li><li><a href="https://www.youtube.com/@LineaDirectaTV" class="icon icon--youtube" aria-label="Ir al canal de YouTube de Línea Directa"><span>Youtube</span></a></li><li><a href="https://www.tiktok.com/@ldportal" class="icon icon--tiktok" aria-label="Ir al perfil de TikTok de Línea Directa Portal"><span>Tiktok</span></a></li>
+	</ul>
+	</nav>
+
+		</div>
+	</div>
+</div><div class="footer__lower">
+	<div class="wrapper">
+		<div class="copyright">
+			© Copyright Línea Directa Portal. Todos los derechos reservados.		</div>
+		<div class="developer">
+			Desarrollador por: <a href="https://www.happything.com.mx/">Happything</a> & <a href="https://www.happything.com.mx/">Engrane</a>		</div>
+	</div>
+</div>
+</footer>
+
+<!-- fly fade -->
+<div id="fly-fade" class="fly-fade"></div>
+
+
+            <script type="rocketlazyloadscript" data-minify="1" async defer data-rocket-src="https://lineadirectaportal.com/wp-content/cache/min/1/widgets.js?ver=1742858296" charset="utf-8"></script>
+            <script type="rocketlazyloadscript" async defer data-rocket-src="//www.instagram.com/embed.js"></script>
+            <script type="rocketlazyloadscript" async defer crossorigin="anonymous" data-rocket-src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v10.0"></script>
+            <script type="rocketlazyloadscript" data-minify="1" async defer data-rocket-src="https://lineadirectaportal.com/wp-content/cache/min/1/embed.js?ver=1742858296"></script>
+            <script type="rocketlazyloadscript" data-minify="1" data-rocket-src="https://lineadirectaportal.com/wp-content/cache/min/1/resources/embed.js?ver=1742858296" defer></script>
+        <script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+window._taboola = window._taboola || [];
+_taboola.push({flush: true});
+</script><script type="rocketlazyloadscript" data-rocket-type='text/javascript' id='rocket-browser-checker-js-after'>
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script type="b8e0fa73315bf3d51b764d29-text/javascript" id='rocket-preload-links-js-extra'>
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/opinion\/|\/especiales|\/especiales\/|\/|\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/lineadirectaportal.com","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type='text/javascript' id='rocket-preload-links-js-after'>
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script type="b8e0fa73315bf3d51b764d29-text/javascript" id='rocket_lazyload_css-js-extra'>
+/* <![CDATA[ */
+var rocket_lazyload_css_data = {"threshold":"300"};
+/* ]]> */
+</script>
+<script type="b8e0fa73315bf3d51b764d29-text/javascript" id='rocket_lazyload_css-js-after'>
+!function o(n,c,a){function s(t,e){if(!c[t]){if(!n[t]){var r="function"==typeof require&&require;if(!e&&r)return r(t,!0);if(u)return u(t,!0);throw(r=new Error("Cannot find module '"+t+"'")).code="MODULE_NOT_FOUND",r}r=c[t]={exports:{}},n[t][0].call(r.exports,function(e){return s(n[t][1][e]||e)},r,r.exports,o,n,c,a)}return c[t].exports}for(var u="function"==typeof require&&require,e=0;e<a.length;e++)s(a[e]);return s}({1:[function(e,t,r){"use strict";!function(){const r="undefined"==typeof rocket_pairs?[]:rocket_pairs,e="undefined"==typeof rocket_excluded_pairs?[]:rocket_excluded_pairs;e.map(t=>{var e=t.selector;const r=document.querySelectorAll(e);r.forEach(e=>{e.setAttribute("data-rocket-lazy-bg-".concat(t.hash),"excluded")})});const o=document.querySelector("#wpr-lazyload-bg-container");var t=rocket_lazyload_css_data.threshold||300;const n=new IntersectionObserver(e=>{e.forEach(t=>{if(t.isIntersecting){const e=r.filter(e=>t.target.matches(e.selector));e.map(t=>{var e;t&&((e=document.createElement("style")).textContent=t.style,o.insertAdjacentElement("afterend",e),t.elements.forEach(e=>{n.unobserve(e),e.setAttribute("data-rocket-lazy-bg-".concat(t.hash),"loaded")}))})}})},{rootMargin:t+"px"});function c(){0<(0<arguments.length&&void 0!==arguments[0]?arguments[0]:[]).length&&r.forEach(t=>{try{const e=document.querySelectorAll(t.selector);e.forEach(e=>{"loaded"!==e.getAttribute("data-rocket-lazy-bg-".concat(t.hash))&&"excluded"!==e.getAttribute("data-rocket-lazy-bg-".concat(t.hash))&&(n.observe(e),(t.elements||(t.elements=[])).push(e))})}catch(e){console.error(e)}})}c();const a=function(){const o=window.MutationObserver;return function(e,t){if(e&&1===e.nodeType){const r=new o(t);return r.observe(e,{attributes:!0,childList:!0,subtree:!0}),r}}}();t=document.querySelector("body"),a(t,c)}()},{}]},{},[1]);
+//# sourceMappingURL=lazyload-css.min.js.map
+</script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' data-rocket-src='https://lineadirectaportal.com/wp-content/cache/min/1/wp-content/themes/ldirecta_3p0/assets/js/fly-events.js?ver=1742858296' id='fly-events-js' defer></script>
+<script type="rocketlazyloadscript" data-minify="1" data-rocket-type='text/javascript' data-rocket-src='https://lineadirectaportal.com/wp-content/cache/min/1/wp-content/themes/ldirecta_3p0/assets/js/gallery.js?ver=1742858296' id='gallery-slider-js' defer></script>
+<script type="b8e0fa73315bf3d51b764d29-text/javascript">window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://lineadirectaportal.com/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js" type="b8e0fa73315bf3d51b764d29-text/javascript"></script><script type="b8e0fa73315bf3d51b764d29-text/javascript">function lazyLoadThumb(e,alt){var t='<img data-lazy-src="https://i.ytimg.com/vi_webp/ID/hqdefault.webp" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi_webp/ID/hqdefault.webp" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="play Youtube video"></button>';t=t.replace('alt=""','alt="'+alt+'"');return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?'':'&'+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var e,t,p,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id,a[t].dataset.alt),a[t].appendChild(e),p=e.querySelector('.play'),p.onclick=lazyLoadYoutubeIframe});</script>
+
+<!-- Facebook Pixel Code -->
+<script type="rocketlazyloadscript">
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '812845758848158');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none" 
+src="https://www.facebook.com/tr?id=812845758848158&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="b8e0fa73315bf3d51b764d29-|49" defer></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9270e66948e2e813","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.1.0","token":"cf070b2de6424b1785866022b7642bd6"}' crossorigin="anonymous"></script>
+</body>
+</html>
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->
