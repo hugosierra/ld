@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="es-MX">
 <head><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(){this.v="1.2.5.1",this.triggerEvents=["keydown","mousedown","mousemove","touchmove","touchstart","touchend","wheel"],this.userEventHandler=this._triggerListener.bind(this),this.touchStartHandler=this._onTouchStart.bind(this),this.touchMoveHandler=this._onTouchMove.bind(this),this.touchEndHandler=this._onTouchEnd.bind(this),this.clickHandler=this._onClick.bind(this),this.interceptedClicks=[],this.interceptedClickListeners=[],this._interceptClickListeners(this),window.addEventListener("pageshow",e=>{this.persisted=e.persisted,this.everythingLoaded&&this._triggerLastFunctions()}),document.addEventListener("DOMContentLoaded",()=>{this._preconnect3rdParties()}),this.delayedScripts={normal:[],async:[],defer:[]},this.trash=[],this.allJQueries=[]}_addUserInteractionListener(e){if(document.hidden){e._triggerListener();return}this.triggerEvents.forEach(t=>window.addEventListener(t,e.userEventHandler,{passive:!0})),window.addEventListener("touchstart",e.touchStartHandler,{passive:!0}),window.addEventListener("mousedown",e.touchStartHandler),document.addEventListener("visibilitychange",e.userEventHandler)}_removeUserInteractionListener(){this.triggerEvents.forEach(e=>window.removeEventListener(e,this.userEventHandler,{passive:!0})),document.removeEventListener("visibilitychange",this.userEventHandler)}_onTouchStart(e){"HTML"!==e.target.tagName&&(window.addEventListener("touchend",this.touchEndHandler),window.addEventListener("mouseup",this.touchEndHandler),window.addEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.addEventListener("mousemove",this.touchMoveHandler),e.target.addEventListener("click",this.clickHandler),this._disableOtherEventListeners(e.target,!0),this._renameDOMAttribute(e.target,"onclick","rocket-onclick"),this._pendingClickStarted())}_onTouchMove(e){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler),e.target.removeEventListener("click",this.clickHandler),this._disableOtherEventListeners(e.target,!1),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this._pendingClickFinished()}_onTouchEnd(){window.removeEventListener("touchend",this.touchEndHandler),window.removeEventListener("mouseup",this.touchEndHandler),window.removeEventListener("touchmove",this.touchMoveHandler,{passive:!0}),window.removeEventListener("mousemove",this.touchMoveHandler)}_onClick(e){e.target.removeEventListener("click",this.clickHandler),this._disableOtherEventListeners(e.target,!1),this._renameDOMAttribute(e.target,"rocket-onclick","onclick"),this.interceptedClicks.push(e),e.preventDefault(),e.stopPropagation(),e.stopImmediatePropagation(),this._pendingClickFinished()}_replayClicks(){window.removeEventListener("touchstart",this.touchStartHandler,{passive:!0}),window.removeEventListener("mousedown",this.touchStartHandler),this.interceptedClicks.forEach(e=>{e.target.dispatchEvent(new MouseEvent("click",{view:e.view,bubbles:!0,cancelable:!0}))})}_interceptClickListeners(e){EventTarget.prototype.addEventListenerBase=EventTarget.prototype.addEventListener,EventTarget.prototype.addEventListener=function(t,i,r){"click"!==t||e.windowLoaded||i===e.clickHandler||e.interceptedClickListeners.push({target:this,func:i,options:r}),(this||window).addEventListenerBase(t,i,r)}}_disableOtherEventListeners(e,t){this.interceptedClickListeners.forEach(i=>{i.target===e&&(t?e.removeEventListener("click",i.func,i.options):e.addEventListener("click",i.func,i.options))}),e.parentNode!==document.documentElement&&this._disableOtherEventListeners(e.parentNode,t)}_waitForPendingClicks(){return new Promise(e=>{this._isClickPending?this._pendingClickFinished=e:e()})}_pendingClickStarted(){this._isClickPending=!0}_pendingClickFinished(){this._isClickPending=!1}_renameDOMAttribute(e,t,i){e.hasAttribute&&e.hasAttribute(t)&&(event.target.setAttribute(i,event.target.getAttribute(t)),event.target.removeAttribute(t))}_triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}_preconnect3rdParties(){let e=[];document.querySelectorAll("script[type=rocketlazyloadscript][data-rocket-src]").forEach(t=>{let i=t.getAttribute("data-rocket-src");if(i&&0!==i.indexOf("data:")){0===i.indexOf("//")&&(i=location.protocol+i);try{let r=new URL(i).origin;r!==location.origin&&e.push({src:r,crossOrigin:t.crossOrigin||"module"===t.getAttribute("data-rocket-type")})}catch(n){}}}),e=[...new Map(e.map(e=>[JSON.stringify(e),e])).values()],this._batchInjectResourceHints(e,"preconnect")}async _loadEverythingNow(){this.lastBreath=Date.now(),this._delayEventListeners(this),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async);try{await this._triggerDOMContentLoaded(),await this._pendingWebpackRequests(this),await this._triggerWindowLoad()}catch(e){console.error(e)}window.dispatchEvent(new Event("rocket-allScriptsLoaded")),this.everythingLoaded=!0,this._waitForPendingClicks().then(()=>{this._replayClicks()}),this._emptyTrash()}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach(e=>{e.hasAttribute("data-rocket-src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)})}async _transformScript(e){if(await this._littleBreath(),!0===e.noModule&&"noModule"in HTMLScriptElement.prototype){e.setAttribute("data-rocket-status","skipped");return}return new Promise(t=>{let i;function r(){(i||e).setAttribute("data-rocket-status","executed"),t()}try{if(navigator.userAgent.indexOf("Firefox/")>0||""===navigator.vendor)i=document.createElement("script"),[...e.attributes].forEach(e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),"data-rocket-src"===t&&(t="src"),i.setAttribute(t,e.nodeValue))}),e.text&&(i.text=e.text),i.hasAttribute("src")?(i.addEventListener("load",r),i.addEventListener("error",function(){i.setAttribute("data-rocket-status","failed"),t()}),setTimeout(()=>{i.isConnected||t()},1)):(i.text=e.text,r()),e.parentNode.replaceChild(i,e);else{let n=e.getAttribute("data-rocket-type"),s=e.getAttribute("data-rocket-src");n?(e.type=n,e.removeAttribute("data-rocket-type")):e.removeAttribute("type"),e.addEventListener("load",r),e.addEventListener("error",function(){e.setAttribute("data-rocket-status","failed"),t()}),s?(e.removeAttribute("data-rocket-src"),e.src=s):e.src="data:text/javascript;base64,"+window.btoa(unescape(encodeURIComponent(e.text)))}}catch(a){e.setAttribute("data-rocket-status","failed"),t()}})}async _loadScriptsFromList(e){let t=e.shift();return t&&t.isConnected?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){this._batchInjectResourceHints([...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async],"preload")}_batchInjectResourceHints(e,t){var i=document.createDocumentFragment();e.forEach(e=>{let r=e.getAttribute&&e.getAttribute("data-rocket-src")||e.src;if(r){let n=document.createElement("link");n.href=r,n.rel=t,"preconnect"!==t&&(n.as="script"),e.getAttribute&&"module"===e.getAttribute("data-rocket-type")&&(n.crossOrigin=!0),e.crossOrigin&&(n.crossOrigin=e.crossOrigin),e.integrity&&(n.integrity=e.integrity),i.appendChild(n),this.trash.push(n)}}),document.head.appendChild(i)}_delayEventListeners(e){let t={};function i(i,r){return t[r].eventsToRewrite.indexOf(i)>=0&&!e.everythingLoaded?"rocket-"+i:i}function r(e,r){var n;!t[n=e]&&(t[n]={originalFunctions:{add:n.addEventListener,remove:n.removeEventListener},eventsToRewrite:[]},n.addEventListener=function(){arguments[0]=i(arguments[0],n),t[n].originalFunctions.add.apply(n,arguments)},n.removeEventListener=function(){arguments[0]=i(arguments[0],n),t[n].originalFunctions.remove.apply(n,arguments)}),t[e].eventsToRewrite.push(r)}function n(t,i){let r=t[i];t[i]=null,Object.defineProperty(t,i,{get:()=>r||function(){},set(n){e.everythingLoaded?r=n:t["rocket"+i]=r=n}})}r(document,"DOMContentLoaded"),r(window,"DOMContentLoaded"),r(window,"load"),r(window,"pageshow"),r(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t;function i(t){return e.everythingLoaded?t:t.split(" ").map(e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e).join(" ")}function r(r){if(r&&r.fn&&!e.allJQueries.includes(r)){r.fn.ready=r.fn.init.prototype.ready=function(t){return e.domReadyFired?t.bind(document)(r):document.addEventListener("rocket-DOMContentLoaded",()=>t.bind(document)(r)),r([])};let n=r.fn.on;r.fn.on=r.fn.init.prototype.on=function(){return this[0]===window&&("string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=i(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach(e=>{let t=arguments[0][e];delete arguments[0][e],arguments[0][i(e)]=t})),n.apply(this,arguments),this},e.allJQueries.push(r)}t=r}r(window.jQuery),Object.defineProperty(window,"jQuery",{get:()=>t,set(e){r(e)}})}async _pendingWebpackRequests(e){let t=document.querySelector("script[data-webpack]");async function i(){return new Promise(e=>{t.addEventListener("load",e),t.addEventListener("error",e)})}t&&(await i(),await e._requestAnimFrame(),await e._pendingWebpackRequests(e))}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this._littleBreath(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._littleBreath(),window.dispatchEvent(new Event("rocket-DOMContentLoaded"))}async _triggerWindowLoad(){await this._littleBreath(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._littleBreath(),document.rocketonreadystatechange&&document.rocketonreadystatechange(),await this._littleBreath(),window.dispatchEvent(new Event("rocket-load")),await this._littleBreath(),window.rocketonload&&window.rocketonload(),await this._littleBreath(),this.allJQueries.forEach(e=>e(window).trigger("rocket-jquery-load")),await this._littleBreath();let e=new Event("rocket-pageshow");e.persisted=this.persisted,window.dispatchEvent(e),await this._littleBreath(),window.rocketonpageshow&&window.rocketonpageshow({persisted:this.persisted}),this.windowLoaded=!0}_triggerLastFunctions(){document.onreadystatechange&&document.onreadystatechange(),window.onload&&window.onload(),window.onpageshow&&window.onpageshow({persisted:this.persisted})}_handleDocumentWrite(){let e=new Map;document.write=document.writeln=function(t){let i=document.currentScript;i||console.error("WPRocket unable to document.write this: "+t);let r=document.createRange(),n=i.parentElement,s=e.get(i);void 0===s&&(s=i.nextSibling,e.set(i,s));let a=document.createDocumentFragment();r.setStart(a,0),a.appendChild(r.createContextualFragment(t)),n.insertBefore(a,s)}}async _littleBreath(){Date.now()-this.lastBreath>45&&(await this._requestAnimFrame(),this.lastBreath=Date.now())}async _requestAnimFrame(){return document.hidden?new Promise(e=>setTimeout(e)):new Promise(e=>requestAnimationFrame(e))}_emptyTrash(){this.trash.forEach(e=>e.remove())}static run(){let e=new RocketLazyLoadScripts;e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
@@ -6,27 +7,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name='robots' content='max-image-preview:large' />
 
-	<title>Karol G revela el tracklist de su nuevo álbum &#8220;Tropicoqueta&#8221; en ciudades de Latinoamérica | Línea Directa</title>
-	<meta name="description" content="La cantante colombiana prepara el lanzamiento de su próximo proyecto que busca celebrar la energía y el poder de la comunidad latina">
-	<meta name="news_keywords" content="Álbum,Entretenimiento,Karol G,Merengue,Tracklist,Tracklist de Tropicoqueta,Tropicoqueta">
-	<meta name="keywords" content="Álbum,Entretenimiento,Karol G,Merengue,Tracklist,Tracklist de Tropicoqueta,Tropicoqueta">
+	<title>Karol G revela el tracklist de su nuevo Ã¡lbum &#8220;Tropicoqueta&#8221; en ciudades de LatinoamÃ©rica | LÃ­nea Directa</title>
+	<meta name="description" content="La cantante colombiana prepara el lanzamiento de su prÃ³ximo proyecto que busca celebrar la energÃ­a y el poder de la comunidad latina">
+	<meta name="news_keywords" content="Ãlbum,Entretenimiento,Karol G,Merengue,Tracklist,Tracklist de Tropicoqueta,Tropicoqueta">
+	<meta name="keywords" content="Ãlbum,Entretenimiento,Karol G,Merengue,Tracklist,Tracklist de Tropicoqueta,Tropicoqueta">
 
 	<link rel="canonical" href="https://lineadirectaportal.com/entretenimiento/karol-g-revela-el-tracklist-de-su-nuevo-album-tropicoqueta-en-ciudades-de-latinoamerica-2025-06-16__1412927">
 
 	<meta property="fb:pages" content="311432632268">
 	<meta property="fb:app_id" content="311432632268">
-	<meta property="og:title" content="Karol G revela el tracklist de su nuevo álbum &#8220;Tropicoqueta&#8221; en ciudades de Latinoamérica">
+	<meta property="og:title" content="Karol G revela el tracklist de su nuevo Ã¡lbum &#8220;Tropicoqueta&#8221; en ciudades de LatinoamÃ©rica">
 	<meta property="og:type" content="article">
 	<meta property="og:url" content="https://lineadirectaportal.com/entretenimiento/karol-g-revela-el-tracklist-de-su-nuevo-album-tropicoqueta-en-ciudades-de-latinoamerica-2025-06-16__1412927">
-	<meta property="og:description" content="La cantante colombiana prepara el lanzamiento de su próximo proyecto que busca celebrar la energía y el poder de la comunidad latina">
+	<meta property="og:description" content="La cantante colombiana prepara el lanzamiento de su prÃ³ximo proyecto que busca celebrar la energÃ­a y el poder de la comunidad latina">
 	<meta property="og:locale" content="es-MX">
-	<meta property="og:site_name" content="Línea Directa">
+	<meta property="og:site_name" content="LÃ­nea Directa">
 	<meta property="og:image" content="https://lineadirectaportal.com/wp-content/uploads/2025/06/karol-g-tropicoqueta.png">
 
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@linea_directa">
-	<meta name="twitter:title" content="Karol G revela el tracklist de su nuevo álbum &#8220;Tropicoqueta&#8221; en ciudades de Latinoamérica">
-	<meta name="twitter:description" content="La cantante colombiana prepara el lanzamiento de su próximo proyecto que busca celebrar la energía y el poder de la comunidad latina">
+	<meta name="twitter:title" content="Karol G revela el tracklist de su nuevo Ã¡lbum &#8220;Tropicoqueta&#8221; en ciudades de LatinoamÃ©rica">
+	<meta name="twitter:description" content="La cantante colombiana prepara el lanzamiento de su prÃ³ximo proyecto que busca celebrar la energÃ­a y el poder de la comunidad latina">
 	<meta name="twitter:image" content="https://lineadirectaportal.com/wp-content/uploads/2025/06/karol-g-tropicoqueta.png">
 
 	<script type="application/ld+json">
@@ -35,22 +36,22 @@
 		"@type":"NewsArticle",
 		"mainEntityOfPage": {
 			"@type":"WebPage",
-			"@id":"Karol G revela el tracklist de su nuevo álbum &#8220;Tropicoqueta&#8221; en ciudades de Latinoamérica"
+			"@id":"Karol G revela el tracklist de su nuevo Ã¡lbum &#8220;Tropicoqueta&#8221; en ciudades de LatinoamÃ©rica"
 		},
-		"headline":"Karol G revela el tracklist de su nuevo álbum &#8220;Tropicoqueta&#8221; en ciudades de Latinoamérica",
-		"alternativeHeadline":"Karol G revela el tracklist de su nuevo álbum &#8220;Tropicoqueta&#8221; en ciudades de Latinoamérica",
+		"headline":"Karol G revela el tracklist de su nuevo Ã¡lbum &#8220;Tropicoqueta&#8221; en ciudades de LatinoamÃ©rica",
+		"alternativeHeadline":"Karol G revela el tracklist de su nuevo Ã¡lbum &#8220;Tropicoqueta&#8221; en ciudades de LatinoamÃ©rica",
 		"image":"https://lineadirectaportal.com/wp-content/uploads/2025/06/karol-g-tropicoqueta.png",
 		"datePublished":"2025-06-16T12:06:53-07:00",
 		"dateModified":"2025-06-16T12:06:53-07:00",
 		"dateCreated":"2025-06-16T12:06:53-07:00",
 		"author": {
 			"@type":"Person",
-			"name":"Melissa Martínez",
+			"name":"Melissa MartÃ­nez",
 			"url": "https://lineadirectaportal.com/staff/melissa-martinez"
 		},
 		"publisher": {
 			"@type":"Organization",
-			"name":"Línea Directa",
+			"name":"LÃ­nea Directa",
 			"url":"https://lineadirectaportal.com",
 			"logo": {
 				"@type":"ImageObject",
@@ -62,17 +63,17 @@
 		"articleSection":"Entretenimiento",
 		"wordCount":253,
 		"url":"https://lineadirectaportal.com/entretenimiento/karol-g-revela-el-tracklist-de-su-nuevo-album-tropicoqueta-en-ciudades-de-latinoamerica-2025-06-16__1412927",
-		"articleBody":"Ciudad de México.- La superestrella de la música urbana, Karol G, ha sorprendido a sus fans al revelar parte de su tracklist de su próximo álbum de estudio titulado \"Tropicoqueta\", en distintas partes de Latinoamérica.
+		"articleBody":"Ciudad de MÃ©xico.- La superestrella de la mÃºsica urbana, Karol G, ha sorprendido a sus fans al revelar parte de su tracklist de su prÃ³ximo Ã¡lbum de estudio titulado \"Tropicoqueta\", en distintas partes de LatinoamÃ©rica.
 
-Debes leer: Kenia Os dedica romántico mensaje a Peso Pluma por su cumpleaños: “Amor de mi vida”
+Debes leer: Kenia Os dedica romÃ¡ntico mensaje a Peso Pluma por su cumpleaÃ±os: â€œAmor de mi vidaâ€
 
-A través de redes sociales, se viralizó imágenes y videos compartidos por sus seguidores donde detactaron en vallas publicitarias los títulos del nuevo disco en lugares como Argentina, República Dominicana, México y Panamá,  generando controversias y emociones.
+A travÃ©s de redes sociales, se viralizÃ³ imÃ¡genes y videos compartidos por sus seguidores donde detactaron en vallas publicitarias los tÃ­tulos del nuevo disco en lugares como Argentina, RepÃºblica Dominicana, MÃ©xico y PanamÃ¡,  generando controversias y emociones.
 
-El álbum \"Tropicoqueta\" será lanzado el próximo 20 de junio y llega poco después del estreno de su sencillo \"Latina Foreva\". Por su parte, la cantante colombiana ha expresado que este proyecto busca celebrar la energía y el poder de la comunidad latina: \"Este álbum suena a un pedacito de todos\". 
+El Ã¡lbum \"Tropicoqueta\" serÃ¡ lanzado el prÃ³ximo 20 de junio y llega poco despuÃ©s del estreno de su sencillo \"Latina Foreva\". Por su parte, la cantante colombiana ha expresado que este proyecto busca celebrar la energÃ­a y el poder de la comunidad latina: \"Este Ã¡lbum suena a un pedacito de todos\". 
 
 
 Contenido de Instagram
-Hasta el momento, se desconoce si el álbum tendrá colaboraciones con artistas, sin embargo, estos son los títulos que se ha viralizado en redes sociales de \"Tropicoqueta\":
+Hasta el momento, se desconoce si el Ã¡lbum tendrÃ¡ colaboraciones con artistas, sin embargo, estos son los tÃ­tulos que se ha viralizado en redes sociales de \"Tropicoqueta\":
 
 Dile luna
 
@@ -82,7 +83,7 @@ Latina foreva
 
 Cuando me muera, te olvido
 
-Amiga mía
+Amiga mÃ­a
 
 Ese hombre es malo
 
@@ -92,11 +93,11 @@ Si antes te hubiera conocido
 Contenido de Twitter
 
 MSBKarolG
-Sigue más noticias como esta en nuestra sección de Entretenimiento
+Sigue mÃ¡s noticias como esta en nuestra secciÃ³n de Entretenimiento
 
-Cabe recordar que la cantante estrenó en mayo su documental \"Mañana fue muy bonito\", disponible en Netflix. El proyecto, que lleva el mismo nombre de su anterior álbum, muestra el lado más personal de Carolina Giraldo Navarro —su verdadero nombre— y ha sido descrito por la artista como “una pieza especial para mis fans”.",
-		"description":"La cantante colombiana prepara el lanzamiento de su próximo proyecto que busca celebrar la energía y el poder de la comunidad latina",
-		"keywords":"Álbum,Entretenimiento,Karol G,Merengue,Tracklist,Tracklist de Tropicoqueta,Tropicoqueta"
+Cabe recordar que la cantante estrenÃ³ en mayo su documental \"MaÃ±ana fue muy bonito\", disponible en Netflix. El proyecto, que lleva el mismo nombre de su anterior Ã¡lbum, muestra el lado mÃ¡s personal de Carolina Giraldo Navarro â€”su verdadero nombreâ€” y ha sido descrito por la artista como â€œuna pieza especial para mis fansâ€.",
+		"description":"La cantante colombiana prepara el lanzamiento de su prÃ³ximo proyecto que busca celebrar la energÃ­a y el poder de la comunidad latina",
+		"keywords":"Ãlbum,Entretenimiento,Karol G,Merengue,Tracklist,Tracklist de Tropicoqueta,Tropicoqueta"
 	}
 	</script>
 	
@@ -138,8 +139,7 @@ gtag('config', 'G-JF1MXE62BD');
     f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','DEFAULT_GTM_ID');
 </script>
-<!-- End Google Tag Manager -->
-<script  async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<!-- End Google Tag Manager --><script  async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 <script>
 window.googletag = window.googletag || {cmd: []};
 googletag.cmd.push(function() {
@@ -187,7 +187,7 @@ googletag.defineSlot('/22456292802/LD_Notas_1x1', [1, 1], 'LD_Notas_1x1').addSer
   apstag.fetchBids({
     slots: [{
       slotID: 'LD_Notas_Horizontal_1', //example: div-gpt-ad-1475102693815-0
-      slotName: '/22456292802/LD_Notas_Horizontal_1' //example: //example: /116082170/slot2
+      slotName: '/22456292802/LD_Notas_Horizontal_1', //example: //example: /116082170/slot2
       sizes: [[970, 90], [728, 90], [300, 100]] //example: [[300,250],[300, 600]]
     },
     {
@@ -195,8 +195,7 @@ googletag.defineSlot('/22456292802/LD_Notas_1x1', [1, 1], 'LD_Notas_1x1').addSer
       slotName: '/22456292802/LD_Notas_Horizontal_2', 
       sizes: [[970, 90], [728, 90], [300, 100]]
     },
-	
-	{
+	 {
       slotID: 'LD_Notas_Horizontal_3',
       slotName: '/22456292802/LD_Notas_Horizontal_3', 
       sizes: [[970, 90], [728, 90], [300, 100]]
@@ -214,6 +213,7 @@ googletag.defineSlot('/22456292802/LD_Notas_1x1', [1, 1], 'LD_Notas_1x1').addSer
     });
   });
 </script>
+
 <script type="rocketlazyloadscript" data-rocket-type="text/javascript">
   window._taboola = window._taboola || [];
   _taboola.push({article:'auto'});
@@ -262,10 +262,10 @@ googletag.defineSlot('/22456292802/LD_Notas_1x1', [1, 1], 'LD_Notas_1x1').addSer
 	<div class="wrapper">
 		
 	<div class="header__element">	
-		<button class="btn btn--nav nav-toggle" onclick="showNav()" aria-label="Mostrar menú de navegación">
+		<button class="btn btn--nav nav-toggle" onclick="showNav()" aria-label="Mostrar menÃº de navegaciÃ³n">
 			<span></span><span></span><span></span>
 		</button>
-		<button class="btn btn--search search-toggle" onclick="showSearch()" aria-label="Mostrar barra de búsqueda">
+		<button class="btn btn--search search-toggle" onclick="showSearch()" aria-label="Mostrar barra de bÃºsqueda">
 			<span></span>
 		</button>
 	</div>
@@ -294,9 +294,9 @@ function popUp(URL) {
 		
 		<div class="searchbox">
 			<form class="form" name="search" method="get" action="https://lineadirectaportal.com/">
-	<input type="text" name="s" value="" placeholder="Introduce tu búsqueda" id="search" class="txt" />
-	<button type="submit" class="btn btn--search" aria-label="Enviar búsqueda"><span></span></button>
-</form>			<button class="btn btn--close nav-toggle" onclick="hideSearch()" aria-label="Cerrar barra de búsqueda"><span></span><span></span></button>
+	<input type="text" name="s" value="" placeholder="Introduce tu bÃºsqueda" id="search" class="txt" />
+	<button type="submit" class="btn btn--search" aria-label="Enviar bÃºsqueda"><span></span></button>
+</form>			<button class="btn btn--close nav-toggle" onclick="hideSearch()" aria-label="Cerrar barra de bÃºsqueda"><span></span><span></span></button>
 		</div>
 
 		<div class="news-list-title">
@@ -313,7 +313,7 @@ function popUp(URL) {
 
 	<div class="news-item__content">
 		<span class="news-locator">LOS MOCHIS</span>
-		<h3 class="news-title">Conductora que provocó accidente donde murió Leonora dio positivo a consumo de alcohol: Fiscalía</h3>
+		<h3 class="news-title">Conductora que provocÃ³ accidente donde muriÃ³ Leonora dio positivo a consumo de alcohol: FiscalÃ­a</h3>
 		<div class="news-meta">
 			<span class="news-author">Gabriel Ruiz</span>
 			<time class="news-time">16 junio, 2025</time>
@@ -332,9 +332,9 @@ function popUp(URL) {
 
 	<div class="news-item__content">
 		<span class="news-locator">PROCESO</span>
-		<h3 class="news-title">FGR entrega a detenido en Mazatlán para ser extraditado a Estados Unidos; lo acusan de abuso sexual</h3>
+		<h3 class="news-title">FGR entrega a detenido en MazatlÃ¡n para ser extraditado a Estados Unidos; lo acusan de abuso sexual</h3>
 		<div class="news-meta">
-			<span class="news-author">Alfredo Beltrán</span>
+			<span class="news-author">Alfredo BeltrÃ¡n</span>
 			<time class="news-time">16 junio, 2025</time>
 		</div>	
 	</div>
@@ -351,7 +351,7 @@ function popUp(URL) {
 
 	<div class="news-item__content">
 		<span class="news-locator">BEISBOL</span>
-		<h3 class="news-title">¡Fue un boom! MLB anuncia que Miami será sede de la Serie del Caribe 3 años seguidos</h3>
+		<h3 class="news-title">Â¡Fue un boom! MLB anuncia que Miami serÃ¡ sede de la Serie del Caribe 3 aÃ±os seguidos</h3>
 		<div class="news-meta">
 			<span class="news-author">Armando Baldenebro</span>
 			<time class="news-time">16 junio, 2025</time>
@@ -369,10 +369,10 @@ function popUp(URL) {
 	</figure>
 
 	<div class="news-item__content">
-		<span class="news-locator">Televisión</span>
-		<h3 class="news-title">Disney+ anuncia nueva temporada de &#8220;Soy Luna&#8221; con su elenco original ¿Cuándo se estrena?</h3>
+		<span class="news-locator">TelevisiÃ³n</span>
+		<h3 class="news-title">Disney+ anuncia nueva temporada de &#8220;Soy Luna&#8221; con su elenco original Â¿CuÃ¡ndo se estrena?</h3>
 		<div class="news-meta">
-			<span class="news-author">Melissa Martínez</span>
+			<span class="news-author">Melissa MartÃ­nez</span>
 			<time class="news-time">16 junio, 2025</time>
 		</div>	
 	</div>
@@ -387,7 +387,7 @@ function popUp(URL) {
 	<nav class="nav nav--quick">
 	<ul id="menu-menu-rapido" class=""><li id="menu-item-631801" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631801"><a href="https://lineadirectaportal.com/seccion/sinaloa">Sinaloa</a></li>
 <li id="menu-item-921566" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-921566"><a href="https://lineadirectaportal.com/seccion/deportes">Deportes</a></li>
-<li id="menu-item-631802" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631802"><a href="https://lineadirectaportal.com/seccion/mexico">México</a></li>
+<li id="menu-item-631802" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631802"><a href="https://lineadirectaportal.com/seccion/mexico">MÃ©xico</a></li>
 <li id="menu-item-1391477" class="menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-1391477"><a href="https://lineadirectaportal.com/clave/ciclones">Ciclones</a></li>
 <li id="menu-item-631803" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-631803"><a href="https://lineadirectaportal.com/seccion/entretenimiento">Entretenimiento</a></li>
 <li id="menu-item-1412035" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1412035"><a href="https://lineadirectaportal.com/clave/copa-oro">Copa Oro</a></li>
@@ -401,7 +401,7 @@ function popUp(URL) {
 	<header class="header header--nav">
 		<div class="logo">
 		<img width="1920" height="614" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201920%20614'%3E%3C/svg%3E" alt="Logo" data-lazy-src="https://lineadirectaportal.com/wp-content/uploads/2024/03/logo-ldportal.png"/><noscript><img width="1920" height="614" src="https://lineadirectaportal.com/wp-content/uploads/2024/03/logo-ldportal.png" alt="Logo"/></noscript>		</div>
-		<button class="btn btn--close nav-toggle" onclick="hideNav()" aria-label="Cerrar menú de navegación"><span></span><span></span></button>
+		<button class="btn btn--close nav-toggle" onclick="hideNav()" aria-label="Cerrar menÃº de navegaciÃ³n"><span></span><span></span></button>
 		
 	</header>
 
@@ -414,24 +414,24 @@ function popUp(URL) {
 	<li id="menu-item-631797" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631797"><a href="https://lineadirectaportal.com/seccion/sinaloa/sur">Sur</a></li>
 </ul>
 </li>
-<li id="menu-item-631788" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631788"><a href="https://lineadirectaportal.com/seccion/mexico">México</a></li>
-<li id="menu-item-661041" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-661041"><a href="https://lineadirectaportal.com/opinion">Opinión</a></li>
+<li id="menu-item-631788" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631788"><a href="https://lineadirectaportal.com/seccion/mexico">MÃ©xico</a></li>
+<li id="menu-item-661041" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-661041"><a href="https://lineadirectaportal.com/opinion">OpiniÃ³n</a></li>
 <li id="menu-item-631777" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631777"><a href="https://lineadirectaportal.com/seccion/clima">Clima</a></li>
 <li id="menu-item-631778" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631778"><a href="https://lineadirectaportal.com/seccion/deportes">Deportes</a></li>
-<li id="menu-item-631780" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631780"><a href="https://lineadirectaportal.com/seccion/economia">Economía</a></li>
+<li id="menu-item-631780" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631780"><a href="https://lineadirectaportal.com/seccion/economia">EconomÃ­a</a></li>
 <li id="menu-item-631782" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-631782"><a href="https://lineadirectaportal.com/seccion/entretenimiento">Entretenimiento</a></li>
 <li id="menu-item-631785" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631785"><a href="https://lineadirectaportal.com/seccion/internacional">Internacional</a></li>
-<li id="menu-item-631791" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631791"><a href="https://lineadirectaportal.com/seccion/policiaca">Policíaca</a></li>
+<li id="menu-item-631791" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631791"><a href="https://lineadirectaportal.com/seccion/policiaca">PolicÃ­aca</a></li>
 <li id="menu-item-631793" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631793"><a href="https://lineadirectaportal.com/seccion/salud">Salud</a></li>
-<li id="menu-item-631798" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631798"><a href="https://lineadirectaportal.com/seccion/tecnologia">Tecnología</a></li>
+<li id="menu-item-631798" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631798"><a href="https://lineadirectaportal.com/seccion/tecnologia">TecnologÃ­a</a></li>
 <li id="menu-item-631800" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-631800"><a href="https://lineadirectaportal.com/seccion/viral">Viral</a></li>
 </ul>	</nav>
 
 	<div class="social-links">
-		<span>Síguenos</span>
+		<span>SÃ­guenos</span>
 	<nav class="nav nav--social">
 	<ul>
-<li><a href="https://www.facebook.com/LDPortal/" class="icon icon--facebook" aria-label="Ir a la página de Facebook de Línea Directa Portal"><span>Facebook</span></a></li><li><a href="https://twitter.com/linea_directa" class="icon icon--twitter" aria-label="Ir al perfil de Twitter de Línea Directa"><span>Twitter</span></a></li><li><a href="https://www.instagram.com/lineadirecta_portal/" class="icon icon--instagram" aria-label="Ir al perfil de Instagram de Línea Directa Portal"><span>Instagram</span></a></li><li><a href="https://www.youtube.com/@LineaDirectaTV" class="icon icon--youtube" aria-label="Ir al canal de YouTube de Línea Directa"><span>Youtube</span></a></li><li><a href="https://www.tiktok.com/@ldportal" class="icon icon--tiktok" aria-label="Ir al perfil de TikTok de Línea Directa Portal"><span>Tiktok</span></a></li>
+<li><a href="https://www.facebook.com/LDPortal/" class="icon icon--facebook" aria-label="Ir a la pÃ¡gina de Facebook de LÃ­nea Directa Portal"><span>Facebook</span></a></li><li><a href="https://twitter.com/linea_directa" class="icon icon--twitter" aria-label="Ir al perfil de Twitter de LÃ­nea Directa"><span>Twitter</span></a></li><li><a href="https://www.instagram.com/lineadirecta_portal/" class="icon icon--instagram" aria-label="Ir al perfil de Instagram de LÃ­nea Directa Portal"><span>Instagram</span></a></li><li><a href="https://www.youtube.com/@LineaDirectaTV" class="icon icon--youtube" aria-label="Ir al canal de YouTube de LÃ­nea Directa"><span>Youtube</span></a></li><li><a href="https://www.tiktok.com/@ldportal" class="icon icon--tiktok" aria-label="Ir al perfil de TikTok de LÃ­nea Directa Portal"><span>Tiktok</span></a></li>
 	</ul>
 	</nav>
 	</div>
@@ -456,13 +456,13 @@ googletag.cmd.push(function() { googletag.display('LD_Notas_1x1'); });
 				<article id="article-1412927" class="article article--news">
 			
 	<header class="article__header">
-		<span class="article-section">Álbum</span>
-		<h1 class="article-title">Karol G revela el tracklist de su nuevo álbum &#8220;Tropicoqueta&#8221; en ciudades de Latinoamérica</h1>
-		<p class="article-summary">La cantante colombiana prepara el lanzamiento de su próximo proyecto que busca celebrar la energía y el poder de la comunidad latina</p>
+		<span class="article-section">Ãlbum</span>
+		<h1 class="article-title">Karol G revela el tracklist de su nuevo Ã¡lbum &#8220;Tropicoqueta&#8221; en ciudades de LatinoamÃ©rica</h1>
+		<p class="article-summary">La cantante colombiana prepara el lanzamiento de su prÃ³ximo proyecto que busca celebrar la energÃ­a y el poder de la comunidad latina</p>
 	</header>
 
 	<div class="article__meta">
-		<div>Por: <span>Melissa Martínez</span></div>
+		<div>Por: <span>Melissa MartÃ­nez</span></div>
 		<time datetime="2025-06-16T12:06">16 junio, 2025 - 12:06 pm</time>
 
 	</div>
@@ -511,7 +511,7 @@ googletag.cmd.push(function() { googletag.display('LD_Notas_Horizontal_2'); });
 	rel="noopener"
 	data-share="twitter" 
 	data-url="https://lineadirectaportal.com/entretenimiento/karol-g-revela-el-tracklist-de-su-nuevo-album-tropicoqueta-en-ciudades-de-latinoamerica-2025-06-16__1412927" 
-	href="https://twitter.com/intent/tweet?text=Lee esta noticia en Línea Directa https://lineadirectaportal.com/entretenimiento/karol-g-revela-el-tracklist-de-su-nuevo-album-tropicoqueta-en-ciudades-de-latinoamerica-2025-06-16__1412927"
+	href="https://twitter.com/intent/tweet?text=Lee esta noticia en LÃ­nea Directa https://lineadirectaportal.com/entretenimiento/karol-g-revela-el-tracklist-de-su-nuevo-album-tropicoqueta-en-ciudades-de-latinoamerica-2025-06-16__1412927"
 	target="_blank" 
 	>
 	<i class="icon icon--twitter"></i>
@@ -522,7 +522,7 @@ googletag.cmd.push(function() { googletag.display('LD_Notas_Horizontal_2'); });
 	title="Compartir en Telegram"
 	rel="noopener"
 	data-share="telegram" 
-	href="https://telegram.me/share/url?url=https://lineadirectaportal.com/entretenimiento/karol-g-revela-el-tracklist-de-su-nuevo-album-tropicoqueta-en-ciudades-de-latinoamerica-2025-06-16__1412927%2F&amp;text=Karol G revela el tracklist de su nuevo álbum &#8220;Tropicoqueta&#8221; en ciudades de Latinoamérica"
+	href="https://telegram.me/share/url?url=https://lineadirectaportal.com/entretenimiento/karol-g-revela-el-tracklist-de-su-nuevo-album-tropicoqueta-en-ciudades-de-latinoamerica-2025-06-16__1412927%2F&amp;text=Karol G revela el tracklist de su nuevo Ã¡lbum &#8220;Tropicoqueta&#8221; en ciudades de LatinoamÃ©rica"
 	target="_blank" 
 	title="Telegram"
 	>
@@ -532,14 +532,14 @@ googletag.cmd.push(function() { googletag.display('LD_Notas_Horizontal_2'); });
 	</div>
 				</div>
 				<div>
-					<p>Ciudad de México.- La superestrella de la música urbana, <strong>Karol G</strong>, ha sorprendido a sus fans al revelar parte de su tracklist de su próximo álbum de estudio titulado <strong>&#8220;Tropicoqueta&#8221;</strong>, en distintas partes de Latinoamérica.</p>
-<p><strong>Debes leer: <a href="https://lineadirectaportal.com/entretenimiento/kenia-os-dedica-romantico-mensaje-a-peso-pluma-por-su-cumpleanos-amor-de-mi-vida-2025-06-15__1412595">Kenia Os dedica romántico mensaje a Peso Pluma por su cumpleaños: “Amor de mi vida”</a></strong></p>
-<p>A través de redes sociales, se viralizó imágenes y videos compartidos por sus seguidores donde detactaron en vallas publicitarias los títulos del nuevo disco en lugares como <strong>Argentina, República Dominicana, México y Panamá</strong>,  generando controversias y emociones.</p>
-<p>El álbum &#8220;Tropicoqueta&#8221; <strong>será lanzado el próximo 20 de junio</strong> y llega poco después del estreno de su sencillo &#8220;Latina Foreva&#8221;. Por su parte, la cantante colombiana ha expresado que este proyecto busca celebrar la energía y el poder de la comunidad latina:<em> &#8220;Este álbum suena a un pedacito de todos&#8221;. </em></p>
+					<p>Ciudad de MÃ©xico.- La superestrella de la mÃºsica urbana, <strong>Karol G</strong>, ha sorprendido a sus fans al revelar parte de su tracklist de su prÃ³ximo Ã¡lbum de estudio titulado <strong>&#8220;Tropicoqueta&#8221;</strong>, en distintas partes de LatinoamÃ©rica.</p>
+<p><strong>Debes leer: <a href="https://lineadirectaportal.com/entretenimiento/kenia-os-dedica-romantico-mensaje-a-peso-pluma-por-su-cumpleanos-amor-de-mi-vida-2025-06-15__1412595">Kenia Os dedica romÃ¡ntico mensaje a Peso Pluma por su cumpleaÃ±os: â€œAmor de mi vidaâ€</a></strong></p>
+<p>A travÃ©s de redes sociales, se viralizÃ³ imÃ¡genes y videos compartidos por sus seguidores donde detactaron en vallas publicitarias los tÃ­tulos del nuevo disco en lugares como <strong>Argentina, RepÃºblica Dominicana, MÃ©xico y PanamÃ¡</strong>,  generando controversias y emociones.</p>
+<p>El Ã¡lbum &#8220;Tropicoqueta&#8221; <strong>serÃ¡ lanzado el prÃ³ximo 20 de junio</strong> y llega poco despuÃ©s del estreno de su sencillo &#8220;Latina Foreva&#8221;. Por su parte, la cantante colombiana ha expresado que este proyecto busca celebrar la energÃ­a y el poder de la comunidad latina:<em> &#8220;Este Ã¡lbum suena a un pedacito de todos&#8221;. </em></p>
 <blockquote class="instagram-media social-embed" data-instgrm-permalink="https://www.instagram.com/p/DKuYL4YMWnU/?utm_source=ig_web_copy_link&amp;igsh=MzRlODBiNWFlZA==">
 <div></div>
 <p>Contenido de Instagram</p></blockquote>
-<p>Hasta el momento, se desconoce si el álbum tendrá colaboraciones con artistas, sin embargo, estos son los títulos que se ha viralizado en redes sociales de &#8220;Tropicoqueta&#8221;:</p>
+<p>Hasta el momento, se desconoce si el Ã¡lbum tendrÃ¡ colaboraciones con artistas, sin embargo, estos son los tÃ­tulos que se ha viralizado en redes sociales de &#8220;Tropicoqueta&#8221;:</p>
 <p>Dile luna</p><div class="ads"><div id='div-gpt-ad-1749845098742-0' class="ads">
   <script type="rocketlazyloadscript">
     googletag.cmd.push(function() { googletag.display('div-gpt-ad-1749845098742-0'); });
@@ -548,7 +548,7 @@ googletag.cmd.push(function() { googletag.display('LD_Notas_Horizontal_2'); });
 <p>Papasito</p>
 <p>Latina foreva</p>
 <p>Cuando me muera, te olvido</p>
-<p>Amiga mía</p><div class="ads"><div id='LD_Notas_Rectangle_4>
+<p>Amiga mÃ­a</p><div class="ads"><div id='LD_Notas_Rectangle_4>
 <script type="rocketlazyloadscript">
 googletag.cmd.push(function() { googletag.display('LD_Notas_Rectangle_4 });
 </script>
@@ -562,32 +562,32 @@ googletag.cmd.push(function() { googletag.display('LD_Notas_Rectangle_5; });
 </script>
 </div></div>
 <p><a href="https://twitter.com/MSBKarolG/status/1933722928052637903"><cite>MSBKarolG</cite></a></p></blockquote>
-<p><strong><a href="https://lineadirectaportal.com/seccion/entretenimiento">Sigue más noticias como esta en nuestra sección de Entretenimiento</a></strong></p>
-<p>Cabe recordar que la cantante estrenó en mayo su documental &#8220;Mañana fue muy bonito&#8221;, disponible en Netflix. El proyecto, que lleva el mismo nombre de su anterior álbum, muestra el lado más personal de Carolina Giraldo Navarro —su verdadero nombre— y ha sido descrito por la artista como “una pieza especial para mis fans”.</p>
+<p><strong><a href="https://lineadirectaportal.com/seccion/entretenimiento">Sigue mÃ¡s noticias como esta en nuestra secciÃ³n de Entretenimiento</a></strong></p>
+<p>Cabe recordar que la cantante estrenÃ³ en mayo su documental &#8220;MaÃ±ana fue muy bonito&#8221;, disponible en Netflix. El proyecto, que lleva el mismo nombre de su anterior Ã¡lbum, muestra el lado mÃ¡s personal de Carolina Giraldo Navarro â€”su verdadero nombreâ€” y ha sido descrito por la artista como â€œuna pieza especial para mis fansâ€.</p>
 </p>				</div>
 			</div>
 
 			<div class="article__source">
 				<p>
-				Fuente: Línea Directa				</p>
+				Fuente: LÃ­nea Directa				</p>
 			</div>
 
 			<div class="feed-links">
-				<a class="btn btn--gnews" href="https://news.google.com/publications/CAAqBwgKMMarnAsw2rW0Aw?hl=es-419&gl=MX&ceid=MX%3Aes-419">Síguenos en: </a>
+				<a class="btn btn--gnews" href="https://news.google.com/publications/CAAqBwgKMMarnAsw2rW0Aw?hl=es-419&gl=MX&ceid=MX%3Aes-419">SÃ­guenos en: </a>
 			</div>
 
 			
 			<div class="author-info">
 
 			<figure class="author_image">
-				<img width="1064" height="1600" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201064%201600'%3E%3C/svg%3E" alt="Fotografía de perfil de Melissa Martínez" data-lazy-src="https://lineadirectaportal.com/wp-content/uploads/2024/11/WhatsApp-Image-2024-11-22-at-3.18.58-PM.jpeg.webp"/><noscript><img width="1064" height="1600" src="https://lineadirectaportal.com/wp-content/uploads/2024/11/WhatsApp-Image-2024-11-22-at-3.18.58-PM.jpeg.webp" alt="Fotografía de perfil de Melissa Martínez"/></noscript>
+				<img width="1064" height="1600" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201064%201600'%3E%3C/svg%3E" alt="FotografÃ­a de perfil de Melissa MartÃ­nez" data-lazy-src="https://lineadirectaportal.com/wp-content/uploads/2024/11/WhatsApp-Image-2024-11-22-at-3.18.58-PM.jpeg.webp"/><noscript><img width="1064" height="1600" src="https://lineadirectaportal.com/wp-content/uploads/2024/11/WhatsApp-Image-2024-11-22-at-3.18.58-PM.jpeg.webp" alt="FotografÃ­a de perfil de Melissa MartÃ­nez"/></noscript>
 			</figure>
 
 			<div class="author_description">
-				<p class="author-name"><a href="">Melissa Martínez</a></p>
+				<p class="author-name"><a href="">Melissa MartÃ­nez</a></p>
 				<p class="author-position">Editor de Contenidos</p>
-				<p class="author-description">Melissa Martínez</p>
-				<a class="btn btn--more" href="https://lineadirectaportal.com/staff/melissa-martinez">Ver más</a>
+				<p class="author-description">Melissa MartÃ­nez</p>
+				<a class="btn btn--more" href="https://lineadirectaportal.com/staff/melissa-martinez">Ver mÃ¡s</a>
 			</div>
 
 			</div>
@@ -621,7 +621,7 @@ googletag.cmd.push(function() { googletag.display('LD_Notas_Rectangle_2; });
 		<div class="widget">
 	
 	<div class="widget__title">
-		<h4>Lo más reciente</h4>
+		<h4>Lo mÃ¡s reciente</h4>
 	</div>
 
 	<div class="widget__content">
@@ -636,7 +636,7 @@ googletag.cmd.push(function() { googletag.display('LD_Notas_Rectangle_2; });
 
 	<div class="news-item__content">
 		<span class="news-locator">LOS MOCHIS</span>
-		<h3 class="news-title">Conductora que provocó accidente donde murió Leonora dio positivo a consumo de alcohol: Fiscalía</h3>
+		<h3 class="news-title">Conductora que provocÃ³ accidente donde muriÃ³ Leonora dio positivo a consumo de alcohol: FiscalÃ­a</h3>
 		<div class="news-meta">
 			<span class="news-author">Gabriel Ruiz</span>
 			<time class="news-time">16 junio, 2025</time>
@@ -655,9 +655,9 @@ googletag.cmd.push(function() { googletag.display('LD_Notas_Rectangle_2; });
 
 	<div class="news-item__content">
 		<span class="news-locator">PROCESO</span>
-		<h3 class="news-title">FGR entrega a detenido en Mazatlán para ser extraditado a Estados Unidos; lo acusan de abuso sexual</h3>
+		<h3 class="news-title">FGR entrega a detenido en MazatlÃ¡n para ser extraditado a Estados Unidos; lo acusan de abuso sexual</h3>
 		<div class="news-meta">
-			<span class="news-author">Alfredo Beltrán</span>
+			<span class="news-author">Alfredo BeltrÃ¡n</span>
 			<time class="news-time">16 junio, 2025</time>
 		</div>	
 	</div>
@@ -674,7 +674,7 @@ googletag.cmd.push(function() { googletag.display('LD_Notas_Rectangle_2; });
 
 	<div class="news-item__content">
 		<span class="news-locator">BEISBOL</span>
-		<h3 class="news-title">¡Fue un boom! MLB anuncia que Miami será sede de la Serie del Caribe 3 años seguidos</h3>
+		<h3 class="news-title">Â¡Fue un boom! MLB anuncia que Miami serÃ¡ sede de la Serie del Caribe 3 aÃ±os seguidos</h3>
 		<div class="news-meta">
 			<span class="news-author">Armando Baldenebro</span>
 			<time class="news-time">16 junio, 2025</time>
@@ -692,10 +692,10 @@ googletag.cmd.push(function() { googletag.display('LD_Notas_Rectangle_2; });
 	</figure>
 
 	<div class="news-item__content">
-		<span class="news-locator">Televisión</span>
-		<h3 class="news-title">Disney+ anuncia nueva temporada de &#8220;Soy Luna&#8221; con su elenco original ¿Cuándo se estrena?</h3>
+		<span class="news-locator">TelevisiÃ³n</span>
+		<h3 class="news-title">Disney+ anuncia nueva temporada de &#8220;Soy Luna&#8221; con su elenco original Â¿CuÃ¡ndo se estrena?</h3>
 		<div class="news-meta">
-			<span class="news-author">Melissa Martínez</span>
+			<span class="news-author">Melissa MartÃ­nez</span>
 			<time class="news-time">16 junio, 2025</time>
 		</div>	
 	</div>
@@ -707,12 +707,12 @@ googletag.cmd.push(function() { googletag.display('LD_Notas_Rectangle_2; });
 	<a href="https://lineadirectaportal.com/sinaloa/cambiar-el-terreno-seria-un-retroceso-imss-defiende-proyecto-avanzado-para-nueva-clinica-en-guasave-2025-06-16__1413002">
 
 	<figure class="news-item__thumb">
-		<img class="news-thumbnail" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201600%201027'%3E%3C/svg%3E" alt="Tania Clarisa Medina López, delegada del Instituto Mexicano del Seguro Social en Sinaloa." width="1600" height="1027" data-lazy-src="https://lineadirectaportal.com/wp-content/uploads/2025/06/Tania-Clarisa-Medina-Lopez.jpeg"/><noscript><img class="news-thumbnail" src="https://lineadirectaportal.com/wp-content/uploads/2025/06/Tania-Clarisa-Medina-Lopez.jpeg" alt="Tania Clarisa Medina López, delegada del Instituto Mexicano del Seguro Social en Sinaloa." width="1600" height="1027"/></noscript>
+		<img class="news-thumbnail" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201600%201027'%3E%3C/svg%3E" alt="Tania Clarisa Medina LÃ³pez, delegada del Instituto Mexicano del Seguro Social en Sinaloa." width="1600" height="1027" data-lazy-src="https://lineadirectaportal.com/wp-content/uploads/2025/06/Tania-Clarisa-Medina-Lopez.jpeg"/><noscript><img class="news-thumbnail" src="https://lineadirectaportal.com/wp-content/uploads/2025/06/Tania-Clarisa-Medina-Lopez.jpeg" alt="Tania Clarisa Medina LÃ³pez, delegada del Instituto Mexicano del Seguro Social en Sinaloa." width="1600" height="1027"/></noscript>
 	</figure>
 
 	<div class="news-item__content">
 		<span class="news-locator">NORTE</span>
-		<h3 class="news-title">Cambiar el terreno sería un retroceso: IMSS defiende proyecto avanzado para nueva clínica en Guasave</h3>
+		<h3 class="news-title">Cambiar el terreno serÃ­a un retroceso: IMSS defiende proyecto avanzado para nueva clÃ­nica en Guasave</h3>
 		<div class="news-meta">
 			<span class="news-author">Alma Camacho</span>
 			<time class="news-time">16 junio, 2025</time>
@@ -771,7 +771,7 @@ googletag.cmd.push(function() { googletag.display('LD_Notas_300x600_1; });
 
 	<div class="news-item__content">
 		<span class="news-locator">LOS MOCHIS</span>
-		<h3 class="news-title">Conductora que provocó accidente donde murió Leonora dio positivo a consumo de alcohol: Fiscalía</h3>
+		<h3 class="news-title">Conductora que provocÃ³ accidente donde muriÃ³ Leonora dio positivo a consumo de alcohol: FiscalÃ­a</h3>
 		<div class="news-meta">
 			<span class="news-author">Gabriel Ruiz</span>
 			<time class="news-time">16 junio, 2025</time>
@@ -798,9 +798,9 @@ googletag.cmd.push(function() { googletag.display('LD_Notas_300x600_1; });
 
 	<div class="news-item__content">
 		<span class="news-locator">PROCESO</span>
-		<h3 class="news-title">FGR entrega a detenido en Mazatlán para ser extraditado a Estados Unidos; lo acusan de abuso sexual</h3>
+		<h3 class="news-title">FGR entrega a detenido en MazatlÃ¡n para ser extraditado a Estados Unidos; lo acusan de abuso sexual</h3>
 		<div class="news-meta">
-			<span class="news-author">Alfredo Beltrán</span>
+			<span class="news-author">Alfredo BeltrÃ¡n</span>
 			<time class="news-time">16 junio, 2025</time>
 		</div>	
 	</div>
@@ -825,7 +825,7 @@ googletag.cmd.push(function() { googletag.display('LD_Notas_300x600_1; });
 
 	<div class="news-item__content">
 		<span class="news-locator">BEISBOL</span>
-		<h3 class="news-title">¡Fue un boom! MLB anuncia que Miami será sede de la Serie del Caribe 3 años seguidos</h3>
+		<h3 class="news-title">Â¡Fue un boom! MLB anuncia que Miami serÃ¡ sede de la Serie del Caribe 3 aÃ±os seguidos</h3>
 		<div class="news-meta">
 			<span class="news-author">Armando Baldenebro</span>
 			<time class="news-time">16 junio, 2025</time>
@@ -851,10 +851,10 @@ googletag.cmd.push(function() { googletag.display('LD_Notas_300x600_1; });
 	</figure>
 
 	<div class="news-item__content">
-		<span class="news-locator">Televisión</span>
-		<h3 class="news-title">Disney+ anuncia nueva temporada de &#8220;Soy Luna&#8221; con su elenco original ¿Cuándo se estrena?</h3>
+		<span class="news-locator">TelevisiÃ³n</span>
+		<h3 class="news-title">Disney+ anuncia nueva temporada de &#8220;Soy Luna&#8221; con su elenco original Â¿CuÃ¡ndo se estrena?</h3>
 		<div class="news-meta">
-			<span class="news-author">Melissa Martínez</span>
+			<span class="news-author">Melissa MartÃ­nez</span>
 			<time class="news-time">16 junio, 2025</time>
 		</div>	
 	</div>
@@ -876,8 +876,8 @@ googletag.cmd.push(function() { googletag.display('LD_Notas_Horizontal_3'); });
 	<div class="wrapper">
 		
 	<div class="suscribe__cta">
-		<h4>Suscríbete a nuestro boletín</h4>
-		<p>Para tener la información al momento, suscríbete a nuestro boletín en el tendrás las últimas noticias de Sinaloa, México y el mundo.</p>
+		<h4>SuscrÃ­bete a nuestro boletÃ­n</h4>
+		<p>Para tener la informaciÃ³n al momento, suscrÃ­bete a nuestro boletÃ­n en el tendrÃ¡s las Ãºltimas noticias de Sinaloa, MÃ©xico y el mundo.</p>
 	</div>
 
 	<div class="suscribe__form">
@@ -897,7 +897,7 @@ googletag.cmd.push(function() { googletag.display('LD_Notas_Horizontal_3'); });
 
 			</div>
 
-			<span class="subscribe__terms">Suscribirse implica aceptar los <a href="#" title="Términos y Condiciones">términos y condiciones</a></span>
+			<span class="subscribe__terms">Suscribirse implica aceptar los <a href="#" title="TÃ©rminos y Condiciones">tÃ©rminos y condiciones</a></span>
 
 			<div id="mce-responses" class="subscribe__response">
 				<div class="response" id="mce-error-response" style="display:none"></div>
@@ -911,16 +911,16 @@ googletag.cmd.push(function() { googletag.display('LD_Notas_Horizontal_3'); });
 			$.extend($.validator.messages, {
 				required: "Este campo es obligatorio.",
 				remote: "Por favor, rellena este campo.",
-				email: "Por favor, escribe una dirección de correo válida",
-				url: "Por favor, escribe una URL válida.",
-				date: "Por favor, escribe una fecha válida.",
-				dateISO: "Por favor, escribe una fecha (ISO) válida.",
-				number: "Por favor, escribe un número entero válido.",
-				digits: "Por favor, escribe sólo dígitos.",
-				creditcard: "Por favor, escribe un número de tarjeta válido.",
+				email: "Por favor, escribe una direcciÃ³n de correo vÃ¡lida",
+				url: "Por favor, escribe una URL vÃ¡lida.",
+				date: "Por favor, escribe una fecha vÃ¡lida.",
+				dateISO: "Por favor, escribe una fecha (ISO) vÃ¡lida.",
+				number: "Por favor, escribe un nÃºmero entero vÃ¡lido.",
+				digits: "Por favor, escribe sÃ³lo dÃ­gitos.",
+				creditcard: "Por favor, escribe un nÃºmero de tarjeta vÃ¡lido.",
 				equalTo: "Por favor, escribe el mismo valor de nuevo.",
-				accept: "Por favor, escribe un valor con una extensión aceptada.",
-				maxlength: $.validator.format("Por favor, no escribas más de {0} caracteres."),
+				accept: "Por favor, escribe un valor con una extensiÃ³n aceptada.",
+				maxlength: $.validator.format("Por favor, no escribas mÃ¡s de {0} caracteres."),
 				minlength: $.validator.format("Por favor, no escribas menos de {0} caracteres."),
 				rangelength: $.validator.format("Por favor, escribe un valor entre {0} y {1} caracteres."),
 				range: $.validator.format("Por favor, escribe un valor entre {0} y {1}."),
@@ -939,11 +939,11 @@ googletag.cmd.push(function() { googletag.display('LD_Notas_Horizontal_3'); });
 <div class="footer__upper">
 	<div class="wrapper">
 		<div class="footer-widget footer-identity">
-			<img width="1920" height="614" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201920%20614'%3E%3C/svg%3E" alt="Logo" data-lazy-src="https://lineadirectaportal.com/wp-content/uploads/2024/03/logo-ldportal.png"/><noscript><img width="1920" height="614" src="https://lineadirectaportal.com/wp-content/uploads/2024/03/logo-ldportal.png" alt="Logo"/></noscript><p>En su historia, el Sistema Informativo Línea Directa ha sumado la participación de periodistas de todo el estado, la República Mexicana y otros paises, logrando obtener un producto rico en noticias.</p>		</div>
+			<img width="1920" height="614" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201920%20614'%3E%3C/svg%3E" alt="Logo" data-lazy-src="https://lineadirectaportal.com/wp-content/uploads/2024/03/logo-ldportal.png"/><noscript><img width="1920" height="614" src="https://lineadirectaportal.com/wp-content/uploads/2024/03/logo-ldportal.png" alt="Logo"/></noscript><p>En su historia, el Sistema Informativo LÃ­nea Directa ha sumado la participaciÃ³n de periodistas de todo el estado, la RepÃºblica Mexicana y otros paises, logrando obtener un producto rico en noticias.</p>		</div>
 
 		<div class="footer-widget footer-links">
 			<nav class="nav nav--footer">
-				<ul id="menu-menu-pie-de-pagina-i" class=""><li id="menu-item-734484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-734484"><a href="https://lineadirectaportal.com/politicas-de-privacidad">Políticas de privacidad</a></li>
+				<ul id="menu-menu-pie-de-pagina-i" class=""><li id="menu-item-734484" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-734484"><a href="https://lineadirectaportal.com/politicas-de-privacidad">PolÃ­ticas de privacidad</a></li>
 <li id="menu-item-938652" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-938652"><a href="https://lineadirectaportal.com/nuestra-historia">Nuestra Historia</a></li>
 </ul>			</nav>
 			<nav class="nav nav--footer">
@@ -952,10 +952,10 @@ googletag.cmd.push(function() { googletag.display('LD_Notas_Horizontal_3'); });
 
 		<div class="footer-widget footer-social">
 			
-			<span>Síguenos</span>
+			<span>SÃ­guenos</span>
 	<nav class="nav nav--social">
 	<ul>
-<li><a href="https://www.facebook.com/LDPortal/" class="icon icon--facebook" aria-label="Ir a la página de Facebook de Línea Directa Portal"><span>Facebook</span></a></li><li><a href="https://twitter.com/linea_directa" class="icon icon--twitter" aria-label="Ir al perfil de Twitter de Línea Directa"><span>Twitter</span></a></li><li><a href="https://www.instagram.com/lineadirecta_portal/" class="icon icon--instagram" aria-label="Ir al perfil de Instagram de Línea Directa Portal"><span>Instagram</span></a></li><li><a href="https://www.youtube.com/@LineaDirectaTV" class="icon icon--youtube" aria-label="Ir al canal de YouTube de Línea Directa"><span>Youtube</span></a></li><li><a href="https://www.tiktok.com/@ldportal" class="icon icon--tiktok" aria-label="Ir al perfil de TikTok de Línea Directa Portal"><span>Tiktok</span></a></li>
+<li><a href="https://www.facebook.com/LDPortal/" class="icon icon--facebook" aria-label="Ir a la pÃ¡gina de Facebook de LÃ­nea Directa Portal"><span>Facebook</span></a></li><li><a href="https://twitter.com/linea_directa" class="icon icon--twitter" aria-label="Ir al perfil de Twitter de LÃ­nea Directa"><span>Twitter</span></a></li><li><a href="https://www.instagram.com/lineadirecta_portal/" class="icon icon--instagram" aria-label="Ir al perfil de Instagram de LÃ­nea Directa Portal"><span>Instagram</span></a></li><li><a href="https://www.youtube.com/@LineaDirectaTV" class="icon icon--youtube" aria-label="Ir al canal de YouTube de LÃ­nea Directa"><span>Youtube</span></a></li><li><a href="https://www.tiktok.com/@ldportal" class="icon icon--tiktok" aria-label="Ir al perfil de TikTok de LÃ­nea Directa Portal"><span>Tiktok</span></a></li>
 	</ul>
 	</nav>
 
@@ -964,7 +964,7 @@ googletag.cmd.push(function() { googletag.display('LD_Notas_Horizontal_3'); });
 </div><div class="footer__lower">
 	<div class="wrapper">
 		<div class="copyright">
-			© Copyright Línea Directa Portal. Todos los derechos reservados.		</div>
+			Â© Copyright LÃ­nea Directa Portal. Todos los derechos reservados.		</div>
 		<div class="developer">
 			Desarrollador por: <a href="https://www.happything.com.mx/">Happything</a> & <a href="https://www.happything.com.mx/">Engrane</a>		</div>
 	</div>
@@ -1085,12 +1085,12 @@ function createNotificationModal() {
     closeButton.className = "push-close";
     closeButton.innerHTML = "&times;";
     closeButton.addEventListener("click", () => {
-        setCookie(cookieName, "closed", 30); // Cookie por 30 días si cierran manualmente
+        setCookie(cookieName, "closed", 30); // Cookie por 30 dÃ­as si cierran manualmente
         overlay.remove();
     });
 
     const title = document.createElement("h2");
-    title.textContent = "¿Quieres recibir notificaciones?";
+    title.textContent = "Â¿Quieres recibir notificaciones?";
 
     const description = document.createElement("p");
     description.textContent = "Mantente informado con nuestras actualizaciones importantes.";
@@ -1125,20 +1125,20 @@ function createNotificationModal() {
                             fetchLocationData(locationData => {
                                 const userData = createUserData(token, locationData);
                                 sendUserData(userData);
-                                setCookie(cookieName, "accepted", 365); // 1 año para aceptados
+                                setCookie(cookieName, "accepted", 365); // 1 aÃ±o para aceptados
                                 console.log("Token and cookie set successfully");
                             });
                         }
                     })
                     .catch(err => {
                         console.error("Error getting token:", err);
-                        setCookie(cookieName, "error", 1); // Cookie de error por 1 día
+                        setCookie(cookieName, "error", 1); // Cookie de error por 1 dÃ­a
                     })
                     .finally(() => {
                         overlay.remove();
                     });
             } else {
-                setCookie(cookieName, "declined", 30); // 30 días si rechazan
+                setCookie(cookieName, "declined", 30); // 30 dÃ­as si rechazan
                 overlay.remove();
             }
         });
@@ -1146,19 +1146,19 @@ function createNotificationModal() {
 
     function handleDecline() {
         console.log("User declined notifications");
-        setCookie(cookieName, "declined", 30); // 30 días para rechazos
+        setCookie(cookieName, "declined", 30); // 30 dÃ­as para rechazos
         overlay.remove();
     }
 }
 
-// ================== FUNCIONES DE COOKIES (VERSIÓN CORREGIDA) ================== //
+// ================== FUNCIONES DE COOKIES (VERSIÃ“N CORREGIDA) ================== //
 
 function setCookie(name, value, days) {
     const date = new Date();
     date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
     const expires = "expires=" + date.toUTCString();
     
-    // Configuración de dominio segura
+    // ConfiguraciÃ³n de dominio segura
     let domainConfig = '';
     if (!isLocalhost()) {
         domainConfig = `domain=.${hostname};`;
@@ -1293,7 +1293,7 @@ if ("serviceWorker" in navigator) {
     });
 }
 
-// ================== INICIALIZACIÓN ================== //
+// ================== INICIALIZACIÃ“N ================== //
 
 if (messaging) {
     window.addEventListener('load', () => {
@@ -1312,6 +1312,8 @@ if (messaging) {
 </script>
 
 
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"950cdb46ed902e6d","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.6.2","token":"cf070b2de6424b1785866022b7642bd6"}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9557659769b683ab","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.6.2","token":"cf070b2de6424b1785866022b7642bd6"}' crossorigin="anonymous"></script>
 </body>
 </html>
 <!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1750103387 -->
