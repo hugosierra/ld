@@ -897,5 +897,107 @@ registerPushNotifications();
 <script type='text/javascript' src='https://kpoplat.com/wp-content/plugins/gearbox/inc/preroll-video/assets/js/preroll-video-ads.js?ver=1.0.0' id='preroll-video-ads-js'></script>
 <script type='text/javascript' src='https://kpoplat.com/wp-content/themes/kpoplat_2p5/js/nav.min.js?ver=1.0.2' id='navigation-js'></script>
 </body>
+	<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    console.log("DOM Content Loaded");
+
+    var player = videojs("my-video");
+    console.log("Video.js player initialized");
+
+    var vastTagPreroll =
+      "https://pubads.g.doubleclick.net/gampad/ads?iu=/260217354/SM_Preroll&description_url=https%3A%2F%2Fsportsmedia.games%2F&tfcd=0&npa=0&sz=400x300%7C640x480&min_ad_duration=30000&max_ad_duration=60000&gdfp_req=1&unviewed_position_start=1&output=vast&env=vp&impl=s&correlator=";
+    var vastTagMidroll =
+      "https://pubads.g.doubleclick.net/gampad/ads?iu=/260217354/SM_Midroll&description_url=https%3A%2F%2Fsportsmedia.games%2F&tfcd=0&npa=0&sz=400x300%7C640x480&min_ad_duration=30000&max_ad_duration=60000&gdfp_req=1&unviewed_position_start=1&output=vast&env=vp&impl=s&correlator=";
+    var vastTagPostroll =
+      "https://pubads.g.doubleclick.net/gampad/ads?iu=/260217354/SM_Postroll&description_url=https%3A%2F%2Fsportsmedia.games%2F&tfcd=0&npa=0&sz=400x300%7C640x480&min_ad_duration=30000&max_ad_duration=60000&gdfp_req=1&unviewed_position_start=1&output=vast&env=vp&impl=s&correlator=";
+    var prerollTriggered = false;
+    var postrollTriggered = false;
+    var midrollRequested = false;
+    var midrollInterval = 5 * 60; // 5 minutes
+    var lastMidrollTime = 0; // The time when the last mid-roll ad was played
+
+    if (!prerollTriggered) {
+      player.ima({
+        adTagUrl: vastTagPreroll,
+        showControlsForAds: true,
+        debug: false,
+      });
+    } else {
+      player.ima({
+        adTagUrl: '',
+        showControlsForAds: true,
+        debug: false,
+      });
+    }
+
+    console.log("IMA settings configured");
+
+    player.ima.initializeAdDisplayContainer();
+    console.log("IMA ad display container initialized");
+
+    function requestMidrollAd() {
+      midrollRequested = true;
+      player.ima.changeAdTag(vastTagMidroll);
+      player.ima.requestAds();
+    }
+
+    player.on("timeupdate", function () {
+      var currentTime = player.currentTime();
+      console.log("Current time:", currentTime);
+      var timeSinceLastMidroll = currentTime - lastMidrollTime;
+
+      if (timeSinceLastMidroll >= midrollInterval && !midrollRequested) {
+        lastMidrollTime = currentTime; // Update the last mid-roll ad time
+        console.log("Midroll triggered");
+        requestMidrollAd();
+      }
+    });
+
+    player.on("ended", function () {
+      console.log("Video ended");
+      if (!postrollTriggered) {
+        postrollTriggered = true;
+        console.log("Postroll triggered");
+
+        player.ima.requestAds({
+          adTagUrl: vastTagPostroll,
+        });
+
+        console.log("Postroll ads requested");
+      }
+    });
+
+    player.on("adsready", function () {
+      if (midrollRequested) {
+        console.log("Ads ready - midroll");
+      } else {
+        console.log("Ads ready - preroll");
+        player.src(
+          "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+        );
+      }
+    });
+
+    player.on("aderror", function () {
+      console.log("Ads aderror");
+      player.play();
+    });
+
+    player.on("adend", function () {
+      if (lastMidrollTime > 0) {
+        console.log("A midroll ad has finished playing.");
+        midrollRequested = false;
+      } else {
+        console.log("The preroll ad has finished playing.");
+        prerollTriggered = true;
+      }
+
+      player.play();
+    });
+  });
+</script>
+
+</html>
+
 </html>
 <!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->
