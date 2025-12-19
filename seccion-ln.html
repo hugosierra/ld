@@ -248,6 +248,8 @@ gtag('config', 'G-H5ZG34W2Y2');
 </script>
 <!-- ads head tags archive -->
 	<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+<!-- ads head tags archive -->
+	<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
 	<script>
 	window.googletag = window.googletag || {cmd: []};
 	googletag.cmd.push(function() {
@@ -287,18 +289,19 @@ gtag('config', 'G-H5ZG34W2Y2');
   apstag.init({
     pubID: 'c8795fe0-0705-40b6-b4cb-244eec6ad48e',
     adServer: 'googletag',
-    bidTimeout: 2e3
+    
   });
 
   // request the bids for the  googletag slots
   apstag.fetchBids({
     slots: [{
 
-	 {
       slotID: 'losnoticieristascom_losnoticieristas-com_secciones_300x600_01',
       slotName: '/23318003364/losnoticieristascom_losnoticieristas-com_secciones_300x600_01', 
       sizes: [[300, 250], [300, 600]]
-    }]
+    }],
+	     timeout: 2e3
+
   }, function(bids) {
     // set apstag bids, then trigger the first request to GAM
     googletag.cmd.push(function() {
@@ -829,4 +832,3 @@ gtag('config', 'G-H5ZG34W2Y2');
 <script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.10.0/firebase-messaging.js" id="firebase-messaging-js"></script>
 <script type="text/javascript" src="https://losnoticieristas.com/wp-content/plugins/gearbox/inc/push-notifications/assets/js/push-front.js?ver=1754679738" id="push-notifications-js"></script>
 <script type="text/javascript" src="https://losnoticieristas.com/wp-content/themes/noticieristas/assets/js/button_toggle.js?ver=1761425504" id="button_toggle-js"></script>
-
