@@ -78,7 +78,16 @@ gtag('js', new Date());
 gtag('config', 'G-H5ZG34W2Y2');
 </script>
 
+<script>
+  !function(a9,a,p,s,t,A,g){if(a[a9])return;function q(c,r){a[a9]._Q.push([c,r])}a[a9]={init:function(){q("i",arguments)},fetchBids:function(){q("f",arguments)},setDisplayBids:function(){},targetingKeys:function(){return[]},_Q:[]};A=p.createElement(s);A.async=!0;A.src=t;g=p.getElementsByTagName(s)[0];g.parentNode.insertBefore(A,g)}("apstag",window,document,"script","//c.amazon-adsystem.com/aax2/apstag.js");
 
+  // initialize apstag and have apstag set bids on the googletag slots when they are returned to the page
+  apstag.init({
+    pubID: 'c8795fe0-0705-40b6-b4cb-244eec6ad48e',
+    adServer: 'googletag',
+    bidTimeout: 2e3
+  });
+  </script>
   
 	<!-- ads head tags home -->
 	<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
@@ -1563,7 +1572,4 @@ La fiscal General del Estado de Sinaloa, Claudia Zulema Sánchez Kondo, señaló
 <script type="text/javascript" src="https://www.gstatic.com/firebasejs/8.10.0/firebase-messaging.js" id="firebase-messaging-js"></script>
 <script type="text/javascript" src="https://losnoticieristas.com/wp-content/plugins/gearbox/inc/push-notifications/assets/js/push-front.js?ver=1754679738" id="push-notifications-js"></script>
 <script type="text/javascript" src="https://losnoticieristas.com/wp-content/themes/noticieristas/assets/js/button_toggle.js?ver=1761425504" id="button_toggle-js"></script>
-
-
-
 
