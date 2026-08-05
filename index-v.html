@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="ad.size" content="width=300,height=250">
+  <meta name="viewport" content="width=300,height=250">
+  <title>Video 300x250</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 300px;
+      height: 250px;
+      overflow: hidden;
+      background: #000;
+    }
+    .ad {
+      position: relative;
+      width: 300px;
+      height: 250px;
+      overflow: hidden;
+    }
+    .video {
+      width: 300px;
+      height: 250px;
+      display: block;
+      object-fit: cover;
+    }
+    .click-area {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      cursor: pointer;
+    }
+  </style>
+
+  <!-- Script de la etiqueta de clic para Ad Manager -->
+  <script type="text/javascript">
+    var clickTag = "https://www.facebook.com/satesgobmx";
+  </script>
+</head>
+<body>
+  <div class="ad">
+    <!-- El video con atributo crossorigin="anonymous" -->
+    <video
+      id="adVideo"
+      class="video"
+      autoplay
+      loop
+      muted
+      playsinline
+      webkit-playsinline
+      crossorigin="anonymous"
+      preload="auto">
+      <!-- Reemplaza con tu URL absoluta completa (asegúrate de incluir https:// y que no tenga caracteres raros o comas) -->
+      <source src="https://TU-SERVIDOR.com/ruta-al-video/video.mp4" type="video/mp4">
+    </video>
+
+    <!-- Capa superior transparente de clic -->
+    <a href="javascript:window.open(window.clickTag)" class="click-area"></a>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var video = document.getElementById("adVideo");
+      if (video) {
+        video.muted = true;
+        video.defaultMuted = true;
+        
+        // Forzar reproducción inmediata
+        var promise = video.play();
+        if (promise !== undefined) {
+          promise.catch(function(error) {
+            console.log("Autoplay bloqueado externamente:", error);
+          });
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="ad.size" content="width=300,height=250">
+  <meta name="viewport" content="width=300,height=250">
+  <title>Video 300x250</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 300px;
+      height: 250px;
+      overflow: hidden;
+      background: #000;
+    }
+    .ad {
+      position: relative;
+      width: 300px;
+      height: 250px;
+      overflow: hidden;
+    }
+    .video {
+      width: 300px;
+      height: 250px;
+      display: block;
+      object-fit: cover;
+    }
+    .click-area {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      cursor: pointer;
+    }
+  </style>
+
+  <!-- Script de seguimiento para Ad Manager -->
+  <script type="text/javascript">
+    var clickTag = "https://www.facebook.com/satesgobmx";
+  </script>
+</head>
+<body>
+  <div class="ad">
+    <!-- Contenedor del video con atributos estrictos -->
+    <video
+      id="adVideo"
+      class="video"
+      autoplay
+      loop
+      muted
+      playsinline
+      webkit-playsinline
+      preload="auto"
+      poster="">
+      <source src="https://hugosierra.github.io/ld/rsn-ld-gob-edo-agosto2026.mp4" type="video/mp4">
+    </video>
+
+    <!-- Capa superior invisible para el clic -->
+    <a href="javascript:window.open(window.clickTag)" class="click-area"></a>
+  </div>
+
+  <!-- JavaScript para forzar el arranque continuo -->
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      var video = document.getElementById('adVideo');
+      
+      if (video) {
+        video.muted = true;
+        video.defaultMuted = true;
+        
+        var playPromise = video.play();
+        
+        if (playPromise !== undefined) {
+          playPromise.catch(function() {
+            // Si el navegador bloqueó el play, lo reintentamos al cargar los metadatos
+            video.addEventListener('loadedmetadata', function() {
+              video.muted = true;
+              video.play();
+            });
+          });
+        }
+      }
+    });
+  </script>
+</body>
+</html>
