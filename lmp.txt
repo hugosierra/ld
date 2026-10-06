@@ -1,0 +1,76 @@
+LMP
+ <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+        <script>
+        window.googletag = window.googletag || {cmd: []};
+        googletag.cmd.push(function() {
+        var mapping_horizontal = googletag.sizeMapping().
+        addSize([1024, 0],[728, 90]). //desktop 
+        addSize([768, 0],[[728, 90], [468, 60]]). //laptop 
+        addSize([640, 0],[[728, 90], [468, 60]]). //tablet 
+        addSize([0, 0], [300, 250]). //mobile
+        build();
+
+        googletag.defineSlot("/21716783838/Tribuna_Especial_Horizontal_1", [[728, 90], [468, 60], [300, 250]], "Tribuna_Especial_Horizontal_1").defineSizeMapping(mapping_horizontal).addService(googletag.pubads());
+		googletag.defineSlot("/21716783838/Tribuna_Especial_Horizontal_2", [[728, 90], [468, 60], [300, 250]], "Tribuna_Especial_Horizontal_2").defineSizeMapping(mapping_horizontal).addService(googletag.pubads());
+		googletag.defineSlot("/21716783838/Tribuna_Especial_Horizontal_3", [[728, 90], [468, 60], [300, 250]], "Tribuna_Especial_Horizontal_3").defineSizeMapping(mapping_horizontal).addService(googletag.pubads());
+        googletag.defineSlot("/21716783838/Tribuna_Especial_Horizontal_4", [[728, 90], [468, 60], [300, 250]], "Tribuna_Especial_Horizontal_4").defineSizeMapping(mapping_horizontal).addService(googletag.pubads());
+        googletag.defineSlot("/21716783838/Tribuna_Especial_Horizontal_5", [[728, 90], [468, 60], [300, 250]], "Tribuna_Especial_Horizontal_5").defineSizeMapping(mapping_horizontal).addService(googletag.pubads());
+        googletag.defineSlot("/21716783838/Tribuna_Especial_Horizontal_6", [[728, 90], [468, 60], [300, 250]], "Tribuna_Especial_Horizontal_6").defineSizeMapping(mapping_horizontal).addService(googletag.pubads());
+        googletag.defineSlot("/21716783838/Tribuna_Especial_Horizontal_7", [[728, 90], [468, 60], [300, 250]], "Tribuna_Especial_Horizontal_7").defineSizeMapping(mapping_horizontal).addService(googletag.pubads());
+
+		googletag.pubads().setTargeting("sitio", "tribuna");
+		googletag.pubads().setTargeting("tipo", "especial");
+        googletag.pubads().enableSingleRequest();
+        googletag.enableServices();
+        });
+        </script>
+		
+		
+<!-- /21716783838/Tribuna_Especial_Horizontal_1 -->
+<div id='Tribuna_Especial_Horizontal_1'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('Tribuna_Especial_Horizontal_1'); });
+  </script>
+</div>
+
+<!-- /21716783838/Tribuna_Especial_Horizontal_2 -->
+<div id='Tribuna_Especial_Horizontal_2'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('Tribuna_Especial_Horizontal_2'); });
+  </script>
+</div>
+
+<!-- /21716783838/Tribuna_Especial_Horizontal_3-->
+<div id='Tribuna_Especial_Horizontal_3'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('Tribuna_Especial_Horizontal_3'); });
+  </script>
+</div>
+
+<!-- /21716783838/Tribuna_Especial_Horizontal_4-->
+<div id='Tribuna_Especial_Horizontal_4'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('Tribuna_Especial_Horizontal_4'); });
+  </script>
+</div>
+
+<!-- /21716783838/Tribuna_Especial_Horizontal_5-->
+<div id='Tribuna_Especial_Horizontal_5'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('Tribuna_Especial_Horizontal_5'); });
+  </script>
+</div>
+
+<!-- /21716783838/Tribuna_Especial_Horizontal_6-->
+<div id='Tribuna_Especial_Horizontal_6'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('Tribuna_Especial_Horizontal_6'); });
+  </script>
+</div>
+
+<!-- /21716783838/Tribuna_Especial_Horizontal_7-->
+<div id='Tribuna_Especial_Horizontal_7'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('Tribuna_Especial_Horizontal_7'); });
+  </script>
+</div>
