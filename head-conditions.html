@@ -140,12 +140,16 @@ gtag('config', 'G-H5ZG34W2Y2');
 	googletag.defineSlot("/23318003364/losnoticieristascom_losnoticieristas-com_notas_rectangle_01", [300,250], "losnoticieristascom_losnoticieristas-com_notas_rectangle_01").addService(googletag.pubads());
 	googletag.defineSlot("/23318003364/losnoticieristascom_losnoticieristas-com_notas_rectangle_02", [300,250], "losnoticieristascom_losnoticieristas-com_notas_rectangle_02").addService(googletag.pubads());
 	googletag.defineSlot("/260217354/losnoticieristascom_losnoticieristas-com_notas_rectangle_03", [300,250], "losnoticieristascom_losnoticieristas-com_notas_rectangle_03").addService(googletag.pubads());
-	googletag.defineSlot("/260217354/losnoticieristascom_losnoticieristas-com_notas_rectangle_04", [300,250], "losnoticieristascom_losnoticieristas-com_notas_rectangle_04").addService(googletag.pubads());
 	googletag.defineSlot("/260217354/losnoticieristascom_losnoticieristas-com_notas_300x600_01", [300,600], "losnoticieristascom_losnoticieristas-com_notas_300x600_01").addService(googletag.pubads());
 	googletag.defineSlot("/260217354/losnoticieristascom_losnoticieristas-com_notas_300x600_02", [300,600], "losnoticieristascom_losnoticieristas-com_notas_300x600_02").addService(googletag.pubads());
 
     googletag.setConfig({singleRequest: true});
 	googletag.enableServices();
+	if (document.getElementById("losnoticieristascom_losnoticieristas-com_notas_rectangle_04")) {
+    googletag.defineSlot("/260217354/losnoticieristascom_losnoticieristas-com_notas_rectangle_04", [300,250], "losnoticieristascom_losnoticieristas-com_notas_rectangle_04")
+             .addService(googletag.pubads());
+    googletag.display("losnoticieristascom_losnoticieristas-com_notas_rectangle_04");
+  }
 	if (document.getElementById("losnoticieristascom_losnoticieristas-com_notas_rectangle_05")) {
     googletag.defineSlot("/260217354/losnoticieristascom_losnoticieristas-com_notas_rectangle_05", [300,250], "losnoticieristascom_losnoticieristas-com_notas_rectangle_05")
              .addService(googletag.pubads());
